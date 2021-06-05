@@ -134,4 +134,8 @@
     <string name="delete_account_msg">Si eliminas tu cuenta, se perderán todos los datos relacionados a ella</string>
     <string name="title_terms_of_use">Life Dog - Términos de uso</string>
     <string name="title_privacy_policy">Life Dog - Política de privacidad y uso de datos</string>
+    <string name="life_dog" translatable="false">LIFE DOG</string>
+    <string name="lorem" translatable="false">Lorem ipsum dolor sit amet,  consectetur adipiscing elit.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
