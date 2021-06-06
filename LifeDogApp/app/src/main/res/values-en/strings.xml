@@ -135,4 +135,5 @@
     <string name="delete_account_msg">The data related to your account will be lose if you delete your account</string>
     <string name="title_terms_of_use">Life Dog - Terms of use</string>
     <string name="title_privacy_policy">Life Dog - Privacy policy and data usage</string>
+    <string name="dog_age">Edad</string>
 </resources>

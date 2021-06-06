@@ -10,4 +10,6 @@
     <dimen name="default_shadow">3dp</dimen>
     <dimen name="dividers">2dp</dimen>
     <dimen name="corner_radius">20dp</dimen>
+    <dimen name="extra_small_gap">5dp</dimen>
+    <dimen name="hint_font_size">12sp</dimen>
 </resources>
