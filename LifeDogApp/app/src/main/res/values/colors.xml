@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
+    <color name="aqua_200">#47CAAF</color>
+    <color name="aqua_500">#009880</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+    <color name="pale_gray">#F3F3F3</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="dark_blue">#000133</color>
+    <color name="blue_shadow">#424371</color>
+
+    <!-- Colors used for gradient backgrounds -->
+    <color name="light_aqua">#28F29C</color>
+    <color name="sky_blue">#0CB8E0</color>
+    <color name="lilac">#A192E8</color>
+
+    <color name="dark_aqua">#2DB1A8</color>
+    <color name="light_green">#81F241</color>
+
+    <color name="orange_200">#FCCB4A</color>
+    <color name="orange_500">#F0712A</color>
+
+    <color name="purple">#9D57E0</color>
+    <color name="light_blue">#5DB0E8</color>
+
+    <color name="pink">#E68CA7</color>
+    <color name="grape_purple">#8650B6</color>
+
+    <color name="periwinkle">#6454F0</color>
+    <color name="cyan">#6EE2F5</color>
+
+    <color name="maggenta">#AF38A1</color>
+    <color name="dark_pink">#E53971</color>
+
+    <color name="lime_green">#87D500</color>
+    <color name="yellow">#ECD651</color>
+    
+    <color name="light_peach">#FEDFB1</color>
+    <color name="salmon">#EE3965</color>
 </resources>

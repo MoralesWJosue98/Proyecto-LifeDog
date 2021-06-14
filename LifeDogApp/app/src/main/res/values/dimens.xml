@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_gap">32dp</dimen>
+    <dimen name="small_gap">8dp</dimen>
+    <dimen name="input_padding">12dp</dimen>
+    <dimen name="input_drawable">24dp</dimen>
+    <dimen name="medium_gap">24dp</dimen>
+    <dimen name="extra_large_gap">35dp</dimen>
+    <dimen name="default_gap">16dp</dimen>
+    <dimen name="default_shadow">3dp</dimen>
+    <dimen name="dividers">2dp</dimen>
+    <dimen name="corner_radius">20dp</dimen>
+    <dimen name="extra_small_gap">5dp</dimen>
+    <dimen name="hint_font_size">12sp</dimen>
+</resources>
