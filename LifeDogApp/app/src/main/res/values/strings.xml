@@ -139,4 +139,5 @@
     <string name="short_lorem" translatable="false">Lorem ipsum</string>
     <string name="dog_age">Edad</string>
     <string name="hint_dog_name" translatable="false">Firulais</string>
+    <string name="hint_dog_breed" translatable="false">Husky</string>
 </resources>
