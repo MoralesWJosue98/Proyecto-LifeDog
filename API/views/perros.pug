@@ -1,0 +1,65 @@
+extends layout
+
+block navigation 
+  .nav 
+    a#nav-page(href='./Usuarios') Usuarios
+    a#current(href='./') Perros
+
+block content
+  main
+    h2 Perros
+    #form-container
+      form#dog-info(method='POST' action='./')
+        .double-input 
+          input#name.double(type='text' maxlength='30' placeholder='Nombre' required)
+          input#breed.double(type='text' maxlength='30' placeholder='Raza' required)
+        .double-input 
+          input#color.double(type='text' placeholder='Color' maxlength='30' required)
+          input#weight.double(type='number' min='1' placeholder='Peso en kg' required)
+        .double-input 
+          .label-input.double
+            label(for='birth') Fecha de nacimiento
+            input#birth(type='date' placeholder='Fecha de nacimiento' required)
+          .label-input.double
+            label(for='size') Tamaño
+            select#size(name='size' required)
+              option(value='1') Pequeño
+              option(value='2') Mediano
+              option(value='3') Grande
+        .double-input 
+          .radio-container
+            div
+              input#female(type='radio' name='gender' value='female' required)
+              label(for='female') Hembra 
+            div
+              input#male(type='radio' name='gender' value='male' required)
+              label(for='male') Macho 
+          #check
+            input#sterilized(class='double' type='checkbox' name='sterilized' value='true' required)
+            label(for='sterilized') Esterilizado/a
+        button#submit-btn(type='submit' form='dog-info') AGREGAR
+    table
+      thead 
+        tr
+          th id
+          th name
+          th breed 
+          th female
+          th weight
+          th color 
+          th birth date
+          th sterilized
+          th actions
+
+      tr 
+        td 1
+        td Clarita
+        td Cocker
+        td true
+        td 15
+        td Black and white
+        td 1/2/2017
+        td false
+        td
+          button.edit-btn Editar 
+          button.delete-btn Eliminar

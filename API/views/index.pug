@@ -1,5 +1,33 @@
 extends layout
 
+block navigation
+  a#current(href='./') Usuarios
+  a#nav-page(href='./perros') Perros
+
 block content
-  h1= title
-  p Welcome to #{title}
+  main
+    h2 Usuarios
+    #form-container
+      form#user-info(method='POST' action='./')
+        input#username(type='text' maxlength='50' placeholder='Nombre de usuario' required)
+        input#password(type='password' maxlength='40' placeholder='Contraseña' required)
+        input#email(type='email' placeholder='Correo electrónico' maxlength='50')
+        button#submit-btn(type='submit' form='user-info') AGREGAR
+
+    table
+      thead 
+        tr
+          th id
+          th username 
+          th email 
+          th code
+          th actions
+
+      tr 
+        td 1
+        td Michelita
+        td null 
+        td michelita@gmail.com
+        td
+          button.edit-btn Editar 
+          button.delete-btn Eliminar
