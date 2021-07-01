@@ -1,5 +1,5 @@
 const User = require('../models/User');
-const debug = require('debug')('Http')
+const debug = require('debug')('Http');
 const { createToken, verifyToken } = require('../utils/jwt');
 
 const UserController = {
@@ -58,7 +58,6 @@ const UserController = {
             return res.status(200).json({error: false, usuarios: usuarios});
         }
         catch(err){
-            console.log(err);
             return res.status(400).json(err)
         }
     }
