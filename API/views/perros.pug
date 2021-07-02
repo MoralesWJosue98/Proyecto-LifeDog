@@ -2,24 +2,24 @@ extends layout
 
 block navigation 
   .nav 
-    a#nav-page(href='./Usuarios') Usuarios
-    a#current(href='./') Perros
+    a#nav-page(href='./') Usuarios
+    a#current(href='./perros') Perros
 
 block content
   main
     h2 Perros
     #form-container
-      form#dog-info(method='POST' action='./')
+      form#dog-info(method='POST' action='./perros')
         .double-input 
-          input#name.double(type='text' maxlength='30' placeholder='Nombre' required)
-          input#breed.double(type='text' maxlength='30' placeholder='Raza' required)
+          input#name.double(name='name' type='text' maxlength='30' placeholder='Nombre' required)
+          input#breed.double(name='breed' type='text' maxlength='30' placeholder='Raza' required)
         .double-input 
-          input#color.double(type='text' placeholder='Color' maxlength='30' required)
-          input#weight.double(type='number' min='1' placeholder='Peso en kg' required)
+          input#color.double(name='color' type='text' placeholder='Color' maxlength='30' required)
+          input#weight.double(name='weight' type='number' min='1' placeholder='Peso en kg' required)
         .double-input 
           .label-input.double
             label(for='birth') Fecha de nacimiento
-            input#birth(type='date' placeholder='Fecha de nacimiento' required)
+            input#birth(name='birth' type='date' placeholder='Fecha de nacimiento' required)
           .label-input.double
             label(for='size') Tamaño
             select#size(name='size' required)
@@ -29,37 +29,39 @@ block content
         .double-input 
           .radio-container
             div
-              input#female(type='radio' name='gender' value='female' required)
-              label(for='female') Hembra 
+              input#female(type='radio' name='female' value='true' required)
+              label(for='female') Hembra
             div
-              input#male(type='radio' name='gender' value='male' required)
-              label(for='male') Macho 
+              input#male(type='radio' name='female' value='false' required)
+              label(for='male') Macho
           #check
-            input#sterilized(class='double' type='checkbox' name='sterilized' value='true' required)
+            input#sterilized(class='double' type='checkbox' name='sterilized' value='true')
             label(for='sterilized') Esterilizado/a
         button#submit-btn(type='submit' form='dog-info') AGREGAR
     table
       thead 
         tr
-          th id
           th name
           th breed 
           th female
           th weight
           th color 
-          th birth date
+          th birth
+          th size
           th sterilized
           th actions
 
-      tr 
-        td 1
-        td Clarita
-        td Cocker
-        td true
-        td 15
-        td Black and white
-        td 1/2/2017
-        td false
-        td
-          button.edit-btn Editar 
-          button.delete-btn Eliminar
+        each dog in perros
+          tr 
+            td #{dog.name}
+            td #{dog.breed}
+            td #{dog.female}
+            td #{dog.weight}
+            td #{dog.color}
+            td #{dog.birth}
+            td #{dog.size}
+            td #{dog.sterilized}
+            td
+              button.edit-btn(name=dog.id) Editar 
+              button.delete-btn(name=dog.id) Eliminar
+    

@@ -30,6 +30,10 @@ const DogSchema = new Schema({
         type: Date,
         require: true
     },
+    size: {
+        type: Number,
+        require: true
+    },
     sterilized: {
         type: Boolean,
         require: true
@@ -42,6 +46,5 @@ const DogSchema = new Schema({
 DogSchema.methods = {
     
 };
-
 
 module.exports = mongoose.model("Dog", DogSchema);
