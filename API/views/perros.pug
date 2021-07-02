@@ -2,8 +2,8 @@ extends layout
 
 block navigation 
   .nav 
-    a#nav-page(href='./') Usuarios
-    a#current(href='./perros') Perros
+    a#nav-page(href='/') Usuarios
+    a#current(href='/perros') Perros
 
 block content
   main
@@ -51,17 +51,17 @@ block content
           th sterilized
           th actions
 
-        each dog in perros
-          tr 
-            td #{dog.name}
-            td #{dog.breed}
-            td #{dog.female}
-            td #{dog.weight}
-            td #{dog.color}
-            td #{dog.birth}
-            td #{dog.size}
-            td #{dog.sterilized}
-            td
-              button.edit-btn(name=dog.id) Editar 
-              button.delete-btn(name=dog.id) Eliminar
+      each dog in perros
+        tr 
+          td #{dog.name}
+          td #{dog.breed}
+          td #{dog.female}
+          td #{dog.weight}
+          td #{dog.color}
+          td #{dog.birth}
+          td #{dog.size}
+          td #{dog.sterilized}
+          td
+            a.edit-btn(href='perros/update-dog/' + dog.id) Editar
+            a.delete-btn(href='perros/delete-dog/' + dog.id) Eliminar
     

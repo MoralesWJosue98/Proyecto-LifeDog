@@ -95,11 +95,32 @@ const UserController = {
         }
     },
 
+    editUser: async (req, res) => {
+        const { id } = req.params;
+        try {
+            const user = await User.findOne({ _id : id });
+            return res.render('editar-usuario', { title: 'Editar usuario', current: user } )
+        } catch (err) {
+            return res.status(400).json(err);
+        }
+    },
+
+    updateUser: async (req, res) => {
+        const { id } = req.params;
+        const { username, password, email } = req.body;
+        try {
+            await User.updateOne({ _id: id }, { username: username, password: password, email: email });
+            res.redirect('/')
+        } catch (err) {
+            return res.status(400).json(err);
+        }
+    },
+
     deleteUser: async(req, res) => {
         try {
-            const {_id} = req.body;
-            await User.deleteOne({_id : _id});
-            return res.status(200).json({error: false, message: "El perrito ha sido eliminado con éxito."});
+            const { id } = req.params;
+            await User.deleteOne({_id : id});
+            res.redirect('/');
         }
         catch(err){
             return res.status(400).json(err);

@@ -73,14 +73,31 @@ div#title-add {
     align-items: center;
 }
 
-button.edit-btn {
+a.edit-btn {
     background-color: cornflowerblue;
     font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
 }
 
-button.delete-btn {
-    background-color: crimson;
+a.delete-btn {
+    background-color: rgb(235, 19, 62);
     font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+a.delete-btn:hover {
+    background-color: rgb(175, 0, 35);
+}
+
+a.edit-btn:hover {
+    background-color: rgb(53, 119, 240);
 }
 
 table {
@@ -92,20 +109,21 @@ table {
     overflow: hidden;
     width: 100%;
   }
-    thead {
-      outline: solid gray 1px;
-    }
+
+thead {
+    border-bottom: solid gray 1px;
+}
   
-    th {
-      padding: 1rem 2rem;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-    }
+th {
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
   
-    td {
-      padding: 1rem 2rem;
-      border-bottom: solid lightgray 0.5px;
-    }  
+td {
+    padding: 1rem 2rem;
+    border-bottom: solid lightgray 0.5px;
+}  
 
 button:hover {
     transform: scale(1.05);

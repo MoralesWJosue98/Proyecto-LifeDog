@@ -1,8 +1,8 @@
 extends layout
 
 block navigation
-  a#current(href='./') Usuarios
-  a#nav-page(href='./perros') Perros
+  a#current(href='/') Usuarios
+  a#nav-page(href='/perros') Perros
 
 block content
   main
@@ -20,11 +20,12 @@ block content
           th username 
           th email 
           th actions
-        each user in users
-          tr 
-            td #{user.id}
-            td #{user.username}
-            td #{user.email}
-            td
-              button.edit-btn(name=user.id) Editar
-              button.delete-btn(name=user.id) Eliminar
+      each user in users
+        tr 
+          td #{user.id}
+          td #{user.username}
+          td #{user.email}
+          td
+            -var id = user.id
+            a.edit-btn(href='update/' + id) Editar
+            a.delete-btn(href='delete/' + id) Eliminar
