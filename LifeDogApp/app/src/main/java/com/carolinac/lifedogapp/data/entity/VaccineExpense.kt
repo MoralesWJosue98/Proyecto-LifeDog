@@ -15,5 +15,5 @@ data class VaccineExpense(
     @ColumnInfo(name = "category_id")
     var categoryId: Int,
     var price: BigDecimal,
-    var place: String,
+    var place: String
 )

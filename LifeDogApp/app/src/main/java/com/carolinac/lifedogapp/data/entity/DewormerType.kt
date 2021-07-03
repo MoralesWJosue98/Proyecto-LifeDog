@@ -9,5 +9,5 @@ data class DewormerType(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "dewormer_type_id")
     var dewormerTypeId: Int,
-    var type: String,
+    var type: String
 )

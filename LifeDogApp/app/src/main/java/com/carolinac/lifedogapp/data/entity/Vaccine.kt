@@ -18,5 +18,5 @@ data class Vaccine(
     var clinic: String,
     var remember: Boolean,
     @ColumnInfo(name = "category_id")
-    var categoryId: Int,
+    var categoryId: Int
 )

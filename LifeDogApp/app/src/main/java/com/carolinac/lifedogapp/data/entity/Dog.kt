@@ -18,5 +18,5 @@ data class Dog(
     var birth: Date,
     var sterilized: Boolean,
     @ColumnInfo(name = "size_id")
-    var sizeId: Int,
+    var sizeId: Int
 )

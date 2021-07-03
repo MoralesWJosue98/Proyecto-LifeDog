@@ -3,12 +3,14 @@ package com.carolinac.lifedogapp.data.entity
 import androidx.room.Embedded
 import androidx.room.Relation
 
-data class DogAndVaccine(
+/* Relacion 1 a n */
+data class DogWithVaccineExpense(
     @Embedded
     var dog: Dog,
     @Relation(
+        entity = VaccineExpense::class,
         parentColumn = "dog_id",
         entityColumn = "vaccine_id"
     )
-    var vaccine: List<Vaccine>
+    var vaccine: List<VaccineExpenseWithVaccineCategory>
 )
