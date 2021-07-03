@@ -4,12 +4,12 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 /* Relacion 1 a 1 */
-data class DogAndSize(
+data class DogWithAccesoriesExpense(
     @Embedded
-    val dog: Dog,
+    var dog: Dog,
     @Relation(
         parentColumn = "dog_id",
-        entityColumn = "size_id"
+        entityColumn = "accesorie_id"
     )
-    val size: Size
+    var accesories: List<AccesoriesExpense>
 )

@@ -3,7 +3,8 @@ package com.carolinac.lifedogapp.data.entity
 import androidx.room.Embedded
 import androidx.room.Relation
 
-data class FoodExpenseAndFoodCategory(
+/* Relación 1 a 1 */
+data class FoodExpenseWithFoodCategory(
     @Embedded
     val foodExpense: FoodExpense,
     @Relation(

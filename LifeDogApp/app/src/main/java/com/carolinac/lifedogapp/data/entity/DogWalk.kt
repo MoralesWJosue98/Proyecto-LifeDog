@@ -15,5 +15,5 @@ data class DogWalk(
     var dogId: Int,
     var date: Date,
     var time: Time,
-    var place: String,
+    var place: String
 )

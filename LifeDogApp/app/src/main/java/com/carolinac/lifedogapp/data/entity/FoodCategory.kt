@@ -9,5 +9,5 @@ data class FoodCategory(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "food_category_id")
     var foodCategoryId: Int,
-    var category: String,
+    var category: String
 )

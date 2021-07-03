@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.carolinac.lifedogapp.data.entity.Vaccine
-import com.carolinac.lifedogapp.data.entity.VaccineExpense
+import androidx.room.Transaction
+import com.carolinac.lifedogapp.data.entity.*
 
 interface VaccineDAO {
 
@@ -24,18 +24,18 @@ interface VaccineDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateVaccine(vaccine: Vaccine)
 
-    /* Seleccionar el historial de refuerzo de la vacuna */
-    @Query("SELECT date, clinic FROM Vaccine WHERE dog_id = :dogId")
-    suspend fun getBoosterHistory(dogId: Int): LiveData<Vaccine>
+    /* Seleccionar el listado de tipo de vacunas categoría */
+    @Query("SELECT * FROM VaccineCategory")
+    fun getVaccineCategory() : LiveData<List<VaccineCategory>>
 
-    /*
-    * TODO:
-    * Seleccionar el historial de vacunas agregadas
-    * */
+    /* Seleccionar el listado de gastos por vacunas */
+    @Transaction
+    @Query("SELECT * FROM VaccineExpense")
+    fun getDogWithVaccineExpense(): LiveData<List<DogWithVaccineExpense>>
 
-    /*
-   * TODO:
-   * Seleccionar el listado del tipo de gastos por vacunas
-   * */
+    /* Seleccionar el historial de vacunas agregadas */
+    @Transaction
+    @Query("SELECT * FROM Vaccine")
+    fun getDogWithVaccine(): LiveData<List<DogWithVaccine>>
 
 }
