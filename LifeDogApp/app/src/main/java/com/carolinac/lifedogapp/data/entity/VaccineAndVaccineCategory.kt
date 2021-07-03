@@ -3,8 +3,7 @@ package com.carolinac.lifedogapp.data.entity
 import androidx.room.Embedded
 import androidx.room.Relation
 
-/* Relacion 1 a 1 */
-data class VaccineWithVaccineCategory(
+data class VaccineAndVaccineCategory(
     @Embedded
     val vaccine: Vaccine,
     @Relation(

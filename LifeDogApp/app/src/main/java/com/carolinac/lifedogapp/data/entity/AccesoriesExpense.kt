@@ -14,5 +14,5 @@ data class AccesoriesExpense(
     var dogId: Int,
     var accesorie: String,
     var price: BigDecimal,
-    var quantity: Int
+    var quantity: Int,
 )

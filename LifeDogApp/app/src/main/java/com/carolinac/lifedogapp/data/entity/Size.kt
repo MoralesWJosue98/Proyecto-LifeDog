@@ -9,5 +9,5 @@ data class Size(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "size_id")
     var sizeId: Int,
-    var size: String
+    var size: String,
 )

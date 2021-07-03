@@ -15,5 +15,5 @@ data class Feeding(
     var dogId: Int,
     var date: Date,
     var time: Time,
-    var food: String
+    var food: String,
 )

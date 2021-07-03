@@ -1,8 +1,13 @@
 package com.carolinac.lifedogapp.data.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.*
-import com.carolinac.lifedogapp.data.entity.*
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.carolinac.lifedogapp.data.entity.Bath
+import com.carolinac.lifedogapp.data.entity.Dog
+import com.carolinac.lifedogapp.data.entity.DogWalk
 
 @Dao
 interface DogDAO {
@@ -29,24 +34,19 @@ interface DogDAO {
     @Query("SELECT * FROM Dog WHERE dog_id = :dogId")
     suspend fun getDogInfo(dogId: Int): LiveData<Dog>
 
-    /* Seleccionar el listado de los tamaños de perros */
-    @Transaction
-    @Query("SELECT * FROM Size")
-    fun getSize(): LiveData<List<Size>>
+    /*
+   * TODO:
+   * Seleccionar el listado de los tamaños de perros
+   * */
 
-    /* Seleccionar el listado de baños */
-    @Transaction
-    @Query("SELECT * FROM Bath")
-    fun getDogBath(): LiveData<List<DogWithBath>>
+    /*
+   * TODO:
+   * Seleccionar el listado de baños
+   * */
 
-    /* Seleccionar el listado de caminatas */
-    @Transaction
-    @Query("SELECT * FROM DogWalk")
-    fun getDogWalk(): LiveData<List<DogWithDogWalk>>
-
-    /* Seleccionar los usuarios de un perro */
-    @Transaction
-    @Query("SELECT * FROM UserXDog")
-    fun getDogUser() : LiveData<List<DogWithUserXDog>>
+    /*
+   * TODO:
+   * Seleccionar el listado de caminatas
+   * */
 
 }

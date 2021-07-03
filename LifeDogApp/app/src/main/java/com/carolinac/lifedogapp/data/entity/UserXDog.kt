@@ -2,11 +2,15 @@ package com.carolinac.lifedogapp.data.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-@Entity(primaryKeys  = ["user_id", "dog_id"])
+@Entity
 data class UserXDog(
-    val userId: Int,
-    val dogId: Int,
-    @ColumnInfo(name = "user_is_editor")
-    val userEditor: Boolean
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "user_id")
+    var userId: Int,
+    var userIsEditor: Boolean,
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "dog_id")
+    var dogId: Int,
 )

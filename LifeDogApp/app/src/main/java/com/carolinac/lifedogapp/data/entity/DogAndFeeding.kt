@@ -3,11 +3,12 @@ package com.carolinac.lifedogapp.data.entity
 import androidx.room.Embedded
 import androidx.room.Relation
 
-data class DogWithUserXDog(
-    @Embedded val dog: Dog,
+data class DogAndFeeding(
+    @Embedded
+    var dog: Dog,
     @Relation(
         parentColumn = "dog_id",
-        entityColumn = "user_id"
+        entityColumn = "feeding_id"
     )
-    val dogXUser: List<UserXDog>
+    var feeding: List<Feeding>
 )

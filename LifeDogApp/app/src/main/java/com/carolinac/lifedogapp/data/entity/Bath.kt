@@ -13,5 +13,5 @@ data class Bath(
     @ColumnInfo(name = "dog_id")
     var date: Date,
     var repeat: Int,
-    var remember: Boolean
+    var remember: Boolean,
 )

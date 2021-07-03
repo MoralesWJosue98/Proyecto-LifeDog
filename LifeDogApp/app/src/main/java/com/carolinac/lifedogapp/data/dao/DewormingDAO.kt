@@ -1,11 +1,9 @@
 package com.carolinac.lifedogapp.data.dao
 
-import androidx.lifecycle.LiveData
-import androidx.room.*
-import com.carolinac.lifedogapp.data.entity.DewormerType
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import com.carolinac.lifedogapp.data.entity.Deworming
-import com.carolinac.lifedogapp.data.entity.DogWithDeworming
-import com.carolinac.lifedogapp.data.entity.VaccineCategory
 
 @Dao
 interface DewormingDAO {
@@ -20,13 +18,14 @@ interface DewormingDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateDeworming(deworming: Deworming)
 
-    /* Seleccionar el listado del tipo de desparasitacion */
-    @Query("SELECT * FROM DewormerType")
-    fun getDewormerType() : LiveData<List<DewormerType>>
+    /*
+    * TODO:
+    * Seleccionar el listado del tipo de desparasitacion
+    * */
 
-    /* Seleccionar el listado de desparasitacion */
-    @Transaction
-    @Query("SELECT * FROM Deworming")
-    fun getDogWithDeworming(): List<DogWithDeworming>
+    /*
+   * TODO:
+   * Seleccionar el listado de desparasitacion
+   * */
 
 }

@@ -10,5 +10,5 @@ data class VaccineCategory(
     @ColumnInfo(name = "category_id")
     var categoryId: Int,
     var category: Int,
-    var description: String
+    var description: String,
 )

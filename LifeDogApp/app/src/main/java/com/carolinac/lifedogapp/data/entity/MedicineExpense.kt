@@ -14,5 +14,5 @@ data class MedicineExpense(
     var dogId: Int,
     var medicine: String,
     var price: BigDecimal,
-    var quantity: Int
+    var quantity: Int,
 )

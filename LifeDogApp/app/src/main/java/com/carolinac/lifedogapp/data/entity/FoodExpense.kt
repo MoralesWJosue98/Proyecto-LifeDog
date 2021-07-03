@@ -15,5 +15,5 @@ data class FoodExpense(
     var quantity: Float,
     var price: BigDecimal,
     @ColumnInfo(name = "food_category_id")
-    var foodCategoryId: Int
+    var foodCategoryId: Int,
 )
