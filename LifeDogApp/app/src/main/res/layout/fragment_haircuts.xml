@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HaircutsFragment">
+
+    <TextView
+        android:id="@+id/medTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/medium_gap"
+        android:text="@string/title_general_reminders"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dividers"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/extra_small_gap"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medTextView6" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:src="@drawable/ic_pet_grooming_colored"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view12"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <EditText
+        android:id="@+id/tvHaircutDateGen"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_input_aqua"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:hint="@string/hint_date"
+        android:inputType="date"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/view12"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+
+    <Spinner
+        android:id="@+id/haircutRepeatSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_gap"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/tvRepetitionHaircut"
+        app:layout_constraintTop_toBottomOf="@+id/tvHaircutDateGen"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/date"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/tvHaircutDateGen"
+        app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/repeat"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvHaircutDateGen" />
+
+    <Button
+        android:id="@+id/btnAddVetVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:backgroundTint="?attr/colorSecondary"
+        android:text="@string/btn_add"
+        android:textColor="?attr/colorOnSecondary"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvHaircutDate"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/medium_gap"
+        android:text="@string/title_add_reminder"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/haircutDayBeforeCheck" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dividers"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/extra_small_gap"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp" />
+
+    <EditText
+        android:id="@+id/tvRepetitionHaircut"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_input_aqua"
+        android:drawableStart="@drawable/ic_repeat"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:hint="@string/hint_number"
+        android:inputType="number"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/textView25"
+        app:layout_constraintTop_toBottomOf="@+id/textView25"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <CheckBox
+        android:id="@+id/haircutDayBeforeCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/day_before_reminder"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvRepetitionHaircut" />
+
+    <EditText
+        android:id="@+id/tvHaircutDate"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:background="@drawable/custom_input_aqua"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:hint="@string/hint_date"
+        android:inputType="date"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="@+id/view10"
+        app:layout_constraintTop_toBottomOf="@+id/textView49"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/date"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/tvHaircutDate"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_aqua_bottom_deco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -136,4 +136,37 @@
     <string name="title_terms_of_use">Life Dog - Términos de uso</string>
     <string name="title_privacy_policy">Life Dog - Política de privacidad y uso de datos</string>
     <string name="dog_age">Edad</string>
+    <string name="cares">Cuidados</string>
+    <string name="hint_hour">15:30</string>
+    <string name="hint_date">1/01/2021</string>
+    <string name="title_repeat">Repetición</string>
+    <string name="hint_dose">20ml</string>
+    <string name="aditional">Datos adicionales</string>
+    <string name="vet_visits_history">Historial de consultas</string>
+    <string name="deworming_history">Historial de desparasitaciones</string>
+    <string name="upcoming_dog_walks">Paseos próximos</string>
+    <string name="female">hembra</string>
+    <string name="kilograms">kilogramos</string>
+    <string name="year">años</string>
+
+    <!-- Arreglos de strings -->
+    <string-array name="statistics_array">
+        <item>Este mes</item>
+        <item>Esta semana</item>
+        <item>Este año</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>Horas</item>
+        <item>Días</item>
+        <item>Semanas</item>
+        <item>Años</item>
+    </string-array>
+    <string-array name="medicine_types_array">
+        <item>Analgésicos y antiinflamatorios</item>
+        <item>Pastilla</item>
+        <item>Suspensión</item>
+        <item>Antibióticos</item>
+        <item>Vitaminas y suplementos</item>
+        <item>Otros</item>
+    </string-array>
 </resources>

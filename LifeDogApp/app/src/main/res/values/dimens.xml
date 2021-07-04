@@ -13,4 +13,7 @@
     <dimen name="extra_small_gap">5dp</dimen>
     <dimen name="hint_font_size">12sp</dimen>
     <dimen name="input_min_padding">9dp</dimen>
+    <dimen name="small_font">12sp</dimen>
+    <dimen name="extra_small_font">10sp</dimen>
+    <dimen name="xxl_gap">80dp</dimen>
 </resources>
