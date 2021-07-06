@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    tools:context=".ui.DogDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Añadir"
+            android:textColor="#000133"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_vet_visits_colored"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/conceptoCareful"
+            android:layout_width="242dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_language"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Pedicura ultra turbo"
+            android:inputType="text"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lugar (opcional)"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/lugarCareful"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.243"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/conceptoCareful"
+            app:layout_constraintVertical_bias="0.526"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/lugarCareful"
+            android:layout_width="242dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="128dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_place"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Canton Carasucia"
+            android:inputType="text"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/precioCareful"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_dollar_symbol"
+            android:drawablePadding="10dp"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="10.00"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lugarCareful"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/btnCareful"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Añadir"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:cornerRadius="@dimen/corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/precioCareful"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Historial"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCareful"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Concepto"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/conceptoCareful"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            app:layout_constraintVertical_bias="0.862" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/precioCareful"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.752"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lugarCareful"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

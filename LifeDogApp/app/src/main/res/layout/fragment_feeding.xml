@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    tools:context=".ui.DogDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Alimentos próximos"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="Recordatorios generales"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.112"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="85dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_dog_food_colored"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.073"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2"
+            app:layout_constraintVertical_bias="0.08"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="12dp"
+            android:text="Veces al día"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <EditText
+            android:id="@+id/dateFeedingGeneral"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="2"
+            android:inputType="number"
+            android:padding="@dimen/input_padding"
+            android:textColor="#000133"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView39"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Horas"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.386"
+            app:layout_constraintStart_toEndOf="@+id/textView39"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+        <EditText
+            android:id="@+id/precioCareful"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/dividers"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="10dp"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="11:00 a.m"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toEndOf="@+id/dateFeedingGeneral"
+            app:layout_constraintTop_toBottomOf="@+id/textView41"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/horaFeedingGeneral2"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/dividers"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="10dp"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="11:00 a.m"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.885"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/precioCareful"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Agrgar recordatorio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/horaFeedingGeneral2"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <TextView
+            android:id="@+id/textView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/input_drawable"
+            android:layout_marginTop="12dp"
+            android:text="Fecha "
+            android:textColor="@color/dark_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hora"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/horaFeedingRecordatorio"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.718"
+            app:layout_constraintStart_toEndOf="@+id/textView33"
+            app:layout_constraintTop_toBottomOf="@+id/divider3"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/dateFeedingRecordatorio"
+            android:layout_width="223dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="@dimen/input_drawable"
+            android:background="@drawable/custom_input_anadir"
+            android:clickable="true"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+
+            android:ems="10"
+            android:hint="02/10/2021"
+            android:inputType="date"
+
+            android:maxLines="1"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView33"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/horaFeedingRecordatorio"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="@dimen/input_drawable"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_clock"
+            android:drawablePadding="10dp"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="11:00 a.m"
+            android:inputType="number"
+            android:padding="8dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.968"
+            app:layout_constraintStart_toEndOf="@+id/dateFeedingRecordatorio"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/input_drawable"
+            android:layout_marginTop="20dp"
+            android:text="Alimento (opcional)"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dateFeedingRecordatorio" />
+
+        <EditText
+            android:id="@+id/noteFeeding"
+            android:layout_width="362dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="@dimen/input_drawable"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginEnd="@dimen/input_drawable"
+            android:background="@drawable/custom_input_anadir"
+
+            android:clickable="true"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="10"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btnRefuerzo"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Añadir"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:cornerRadius="@dimen/corner_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/noteFeeding"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

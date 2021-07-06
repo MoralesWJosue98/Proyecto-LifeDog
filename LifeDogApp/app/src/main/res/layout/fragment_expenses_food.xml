@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    tools:context=".ui.DogDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Añadir"
+            android:textColor="#000133"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/ic_dog_food_colored"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/anadirComida"
+            android:layout_width="108dp"
+            android:textSize="@dimen/expenses_food"
+            android:layout_height="42dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Cantidad"
+            android:textColorHint="@color/gray"
+            android:inputType="number"
+            android:padding="@dimen/input_padding"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/EditTextKilos"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_dollar_symbol"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Kilos"
+            android:textSize="@dimen/expenses_food"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toEndOf="@+id/anadirComida"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/precioComida"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_dollar_symbol"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Precio"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/input_padding"
+            android:textSize="@dimen/expenses_food"
+            android:textColor="#000133"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/anadirComida"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTgalletaComida"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_dog_food"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/aqua_200"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:textSize="@dimen/expenses_food"
+            android:hint="Galleta"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toEndOf="@+id/precioComida"
+            app:layout_constraintTop_toBottomOf="@+id/EditTextKilos"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/btnComida"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Añadir"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:cornerRadius="@dimen/corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/precioComida" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Historial"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnComida"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

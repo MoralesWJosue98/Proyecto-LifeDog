@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DogWalksFragment">
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/medium_gap"
+        android:text="@string/upcoming_dog_walks"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view20"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dividers"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/extra_small_gap"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view20"
+        tools:src="@drawable/ic_sad_face" />
+
+    <TextView
+        android:id="@+id/medTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:text="@string/title_add_reminder"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?attr/colorOnBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <View
+        android:id="@+id/view21"
+        android:layout_width="345dp"
+        android:layout_height="@dimen/dividers"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/extra_small_gap"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/medTextView3" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/default_gap"
+        android:src="@drawable/ic_dog_walk_colored"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view21"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <EditText
+        android:id="@+id/tvDogWalkDate"
+        android:layout_width="148dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="@dimen/default_gap"
+        android:background="@drawable/custom_form_inputs"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:hint="@string/hint_date"
+        android:inputType="date"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView61"
+        app:layout_constraintWidth_percent="0.25" />
+
+    <EditText
+        android:id="@+id/tvDogWalkHour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_gap"
+        android:background="@drawable/custom_form_inputs"
+        android:drawableStart="@drawable/ic_clock"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:hint="@string/hint_hour"
+        android:inputType="time"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toEndOf="@+id/tvDogWalkDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender2"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/date"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/tvDogWalkDate"
+        app:layout_constraintTop_toBottomOf="@+id/view21" />
+
+    <TextView
+        android:id="@+id/tvDetailsGender2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/hour"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/tvDogWalkHour"
+        app:layout_constraintTop_toBottomOf="@+id/view21" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_gap"
+        android:text="@string/optional_place"
+        android:textColor="?attr/colorOnBackground"
+        android:textSize="@dimen/small_font"
+        app:layout_constraintStart_toStartOf="@+id/tvDogWalkPlace"
+        app:layout_constraintTop_toBottomOf="@+id/tvDogWalkDate" />
+
+    <EditText
+        android:id="@+id/tvDogWalkPlace"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginEnd="@dimen/medium_gap"
+        android:background="@drawable/custom_form_inputs"
+        android:drawableStart="@drawable/ic_place"
+        android:drawablePadding="@dimen/extra_small_gap"
+        android:elevation="@dimen/default_shadow"
+        android:ems="10"
+        android:inputType="text"
+        android:padding="@dimen/input_padding"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+    <Button
+        android:id="@+id/btnAddDogWalk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_gap"
+        android:backgroundTint="?attr/colorSecondary"
+        android:text="@string/btn_add"
+        android:textColor="?attr/colorOnSecondary"
+        app:cornerRadius="@dimen/corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDogWalkPlace" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_aqua_bottom_deco"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

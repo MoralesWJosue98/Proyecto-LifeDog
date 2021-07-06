@@ -2,7 +2,6 @@
  <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        android:background="@color/pale_gray"
         tools:context=".ui.DogDetailsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -37,8 +36,8 @@
                 app:drawableStartCompat="@drawable/ic_pawprint_filled"
                 android:drawablePadding="@dimen/input_padding"
                 android:text="@string/short_lorem"
+                android:textColor="?attr/colorOnBackground"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivDetailsDogPhoto" />
 
@@ -49,6 +48,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/medium_gap"
                 android:text="@string/title_general_info"
+                android:textColor="?attr/colorOnBackground"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsDogName" />
@@ -60,7 +60,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/extra_small_gap"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
+                android:background="?attr/colorSecondaryVariant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -73,6 +73,8 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/default_gap"
                 android:text="@string/dog_age"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
@@ -82,6 +84,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/dog_birth_date"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -94,7 +98,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -104,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsDogAge"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -117,6 +121,8 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/medium_gap"
                 android:text="@string/dog_color"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsDogAge" />
 
@@ -127,7 +133,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />
 
@@ -137,6 +143,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/dog_size"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView22"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -147,8 +155,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
+                android:textColor="?attr/colorOnBackground"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -168,6 +176,8 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/medium_gap"
                 android:text="@string/dog_gender"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsColor" />
 
@@ -177,6 +187,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/dog_breed"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -189,7 +201,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
@@ -199,7 +211,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -212,6 +224,8 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/medium_gap"
                 android:text="@string/dog_weight"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender" />
 
@@ -221,6 +235,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
                 android:text="@string/sterilized_dog"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimaryVariant"
                 app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -233,7 +249,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
@@ -242,7 +258,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/short_lorem"
-                android:textStyle="bold"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsWeight"
                 app:layout_constraintStart_toStartOf="@+id/guideline3" />
 
@@ -253,6 +269,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/large_gap"
                 android:text="@string/title_diseases"
+                android:textColor="?attr/colorOnBackground"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsWeight" />
@@ -264,7 +281,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/extra_small_gap"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
+                android:background="?attr/colorSecondaryVariant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView35" />
@@ -276,7 +293,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/extra_small_gap"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
+                android:background="?attr/colorSecondaryVariant"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -289,8 +306,8 @@
                 android:layout_marginStart="@dimen/input_drawable"
                 android:layout_marginTop="@dimen/default_gap"
                 android:layout_marginEnd="@dimen/default_gap"
-                android:textStyle="bold"
                 android:text="@string/no_diseases"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -303,8 +320,8 @@
                 android:layout_marginStart="@dimen/input_drawable"
                 android:layout_marginTop="@dimen/default_gap"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:textStyle="bold"
                 android:text="@string/no_allergies"
+                android:textColor="?attr/colorOnBackground"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -317,6 +334,7 @@
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/large_gap"
                 android:text="@string/title_allergies"
+                android:textColor="?attr/colorOnBackground"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvDetailsDiseases" />

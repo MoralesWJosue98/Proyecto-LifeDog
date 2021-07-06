@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    tools:context=".ui.DogDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Añadir"
+            android:textColor="#000133"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.125"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/ic_medicine_colored"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/accesorioMedicine"
+            android:layout_width="242dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_single_pill"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="Aspirina"
+            android:inputType="text"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/cantidadMedicine"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawablePadding="@dimen/input_padding"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="2"
+            android:inputType="number"
+            android:padding="@dimen/input_padding"
+            android:textAlignment="center"
+            android:textColor="#000133"
+            android:textColorHint="@color/gray"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/accesorioMedicine"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/precioCareful"
+            android:layout_width="108dp"
+            android:layout_height="42dp"
+            android:background="@drawable/custom_input_anadir"
+            android:drawableStart="@drawable/ic_dollar_symbol"
+            android:drawablePadding="10dp"
+            android:elevation="@dimen/default_shadow"
+            android:ems="10"
+            android:hint="10.00"
+            android:inputType="number|numberDecimal"
+            android:padding="@dimen/input_padding"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            app:layout_constraintBottom_toTopOf="@+id/divider8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toEndOf="@+id/cantidadMedicine"
+            app:layout_constraintTop_toBottomOf="@+id/accesorioMedicine"
+            app:layout_constraintVertical_bias="0.189"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+        <Button
+            android:id="@+id/btnMedicine"
+            android:layout_width="116dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/dark_blue"
+            android:text="Añadir"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:cornerRadius="@dimen/corner_radius"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cantidadMedicine" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Historial"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000133"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.069"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMedicine"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dividers"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accesorios"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/accesorioMedicine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.451"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            app:layout_constraintVertical_bias="0.862" />
+
+        <TextView
+            android:id="@+id/textView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/cantidadMedicine"
+            app:layout_constraintEnd_toStartOf="@+id/textView40"
+            app:layout_constraintHorizontal_bias="0.393"
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/accesorioMedicine"
+            app:layout_constraintVertical_bias="0.48" />
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="84dp"
+            android:text="Precio"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toTopOf="@+id/precioCareful"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accesorioMedicine"
+            app:layout_constraintVertical_bias="0.48" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

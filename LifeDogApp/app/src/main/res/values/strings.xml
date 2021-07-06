@@ -139,4 +139,45 @@
     <string name="short_lorem" translatable="false">Lorem ipsum</string>
     <string name="dog_age">Edad</string>
     <string name="hint_dog_name" translatable="false">Firulais</string>
+    <string name="hint_dog_breed" translatable="false">Husky</string>
+    <string name="cares">Cuidados</string>
+    <string name="hint_hour">15:30</string>
+    <string name="hint_date">1/01/2021</string>
+    <string name="hint_number" translatable="false">1</string>
+    <string name="title_repeat">Repetición</string>
+    <string name="hint_dose">20ml</string>
+    <string name="aditional">Datos adicionales</string>
+    <string name="vet_visits_history">Historial de consultas</string>
+    <string name="deworming_history">Historial de desparasitaciones</string>
+    <string name="upcoming_dog_walks">Paseos próximos</string>
+    <string name="year">años</string>
+    <string name="kilograms">kilogramos</string>
+    <string name="female">hembra</string>
+
+    <!-- Arreglos de strings -->
+    <string-array name="statistics_array">
+        <item>Este mes</item>
+        <item>Esta semana</item>
+        <item>Este año</item>
+    </string-array>
+    <string-array name="time_array">
+        <item>Horas</item>
+        <item>Días</item>
+        <item>Semanas</item>
+        <item>Años</item>
+    </string-array>
+    <string-array name="medicine_types_array">
+        <item>Analgésicos y antiinflamatorios</item>
+        <item>Pastilla</item>
+        <item>Suspensión</item>
+        <item>Antibióticos</item>
+        <item>Vitaminas y suplementos</item>
+        <item>Otros</item>
+    </string-array>
+    <string-array name="deworming_types_array">
+        <item>Desparasitante interno</item>
+        <item>Desparasitante externo</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

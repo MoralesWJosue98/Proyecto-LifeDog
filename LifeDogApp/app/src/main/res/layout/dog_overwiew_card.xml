@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/small_gap"
+    android:background="@drawable/baths_gradient_background"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="@dimen/small_gap"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/baths_gradient_background">
+
+
+        <ImageView
+            android:id="@+id/imageView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dog_walk_colored" />
+
+        <TextView
+            android:id="@+id/tvDogName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/small_font"
+            android:text="TextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView29"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDogAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:text="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView29"
+            app:layout_constraintTop_toBottomOf="@+id/tvDogBreed" />
+
+        <TextView
+            android:id="@+id/tvDogBreed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_small_gap"
+            android:text="TextView"
+            android:textColor="@color/white"
+            android:textSize="@dimen/small_font"
+            app:layout_constraintStart_toStartOf="@+id/tvDogName"
+            app:layout_constraintTop_toBottomOf="@+id/tvDogName" />
+
+        <TextView
+            android:id="@+id/textView67"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/small_font"
+            android:text="@string/year"
+            android:textColor="@color/white"
+            android:textSize="@dimen/extra_small_font"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tvDogAge"
+            app:layout_constraintStart_toStartOf="@+id/tvDogAge"
+            app:layout_constraintTop_toBottomOf="@+id/tvDogAge" />
+
+        <TextView
+            android:id="@+id/tvDogWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivDogGender"
+            app:layout_constraintStart_toEndOf="@+id/tvDogAge"
+            tools:layout_editor_absoluteY="79dp" />
+
+        <TextView
+            android:id="@+id/textView69"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kilograms"
+            android:textColor="@color/white"
+            android:textSize="@dimen/extra_small_font"
+            app:layout_constraintEnd_toEndOf="@+id/tvDogWeight"
+            app:layout_constraintStart_toStartOf="@+id/tvDogWeight"
+            app:layout_constraintTop_toBottomOf="@+id/tvDogWeight" />
+
+        <TextView
+            android:id="@+id/textView72"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:textColor="@color/white"
+            android:textSize="@dimen/extra_small_font"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView69"
+            app:layout_constraintEnd_toEndOf="@+id/ivDogGender"
+            app:layout_constraintStart_toStartOf="@+id/ivDogGender" />
+
+        <ImageView
+            android:id="@+id/ivDogGender"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_female_gender"
+            tools:layout_editor_absoluteY="82dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

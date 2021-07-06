@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DewormingFragment">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/upcoming_deworming"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView50" />
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="47dp"
+                android:layout_height="49dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view11"
+                tools:src="@drawable/ic_sad_face" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/title_add_reminder"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+            <View
+                android:id="@+id/view15"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView52" />
+
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:src="@drawable/ic_deworming_colored"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view15"
+                app:layout_constraintWidth_percent="0.3" />
+
+            <EditText
+                android:id="@+id/tvDewormingDate"
+                android:layout_width="0dp"
+                android:layout_height="43dp"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/custom_input_aqua"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/extra_small_gap"
+                android:elevation="@dimen/default_shadow"
+                android:ems="10"
+                android:hint="@string/hint_date"
+                android:inputType="date"
+                android:padding="@dimen/input_padding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView53"
+                app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+            <TextView
+                android:id="@+id/textView53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/date"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toEndOf="@+id/imageView23"
+                app:layout_constraintTop_toBottomOf="@+id/view15" />
+
+            <TextView
+                android:id="@+id/textView54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/title_repeat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDewormingDate" />
+
+            <View
+                android:id="@+id/view16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/xxl_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView54" />
+
+            <TextView
+                android:id="@+id/textView55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/repeat"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+            <EditText
+                android:id="@+id/tvDewormingRepeat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:background="@drawable/custom_input_aqua"
+                android:drawableStart="@drawable/ic_repeat"
+                android:drawablePadding="@dimen/extra_small_gap"
+                android:elevation="@dimen/default_shadow"
+                android:ems="10"
+                android:hint="@string/hint_number"
+                android:inputType="number"
+                android:padding="@dimen/input_padding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView55"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <Spinner
+                android:id="@+id/dewormingTimeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toEndOf="@+id/tvDewormingRepeat"
+                app:layout_constraintTop_toBottomOf="@+id/view16"
+                app:layout_constraintWidth_percent="0.3" />
+
+            <CheckBox
+                android:id="@+id/dewormingCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:text="@string/single_dose"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/dewormingTimeSpinner"
+                app:layout_constraintTop_toBottomOf="@+id/view16" />
+
+            <TextView
+                android:id="@+id/textView56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/about_dewormer"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDewormingRepeat" />
+
+            <View
+                android:id="@+id/view17"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/xxl_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView56" />
+
+            <TextView
+                android:id="@+id/textView57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/name"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view17" />
+
+            <EditText
+                android:id="@+id/dewormerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/custom_input_aqua"
+                android:drawableStart="@drawable/ic_single_pill"
+                android:drawablePadding="@dimen/extra_small_gap"
+                android:elevation="@dimen/default_shadow"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="@dimen/input_padding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView57"
+                app:layout_constraintTop_toBottomOf="@+id/textView57" />
+
+            <TextView
+                android:id="@+id/textView58"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/type"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dewormerName" />
+
+            <Spinner
+                android:id="@+id/dewormerTypeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView58"
+                app:layout_constraintTop_toBottomOf="@+id/textView58" />
+
+            <Button
+                android:id="@+id/btnAddDewormerReminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_gap"
+                android:backgroundTint="?attr/colorSecondary"
+                android:text="@string/btn_add"
+                android:textColor="?attr/colorOnSecondary"
+                app:cornerRadius="@dimen/corner_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dewormerTypeSpinner" />
+
+            <TextView
+                android:id="@+id/textView59"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/title_active_treatments"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAddDewormerReminder" />
+
+            <View
+                android:id="@+id/view18"
+                android:layout_width="345dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+            <ImageView
+                android:id="@+id/ima2"
+                android:layout_width="47dp"
+                android:layout_height="49dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.456"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view18"
+                tools:src="@drawable/ic_sad_face" />
+
+            <ImageView
+                android:id="@+id/ima5"
+                android:layout_width="47dp"
+                android:layout_height="49dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.456"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view19"
+                tools:src="@drawable/ic_sad_face" />
+
+            <TextView
+                android:id="@+id/textView60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:text="@string/deworming_history"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?attr/colorOnBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ima2" />
+
+            <View
+                android:id="@+id/view19"
+                android:layout_width="345dp"
+                android:layout_height="@dimen/dividers"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView60" />
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/medium_gap"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_aqua_bottom_deco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ima5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
