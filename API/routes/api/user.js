@@ -4,9 +4,7 @@ const {createUser, loginUser, getAll} = require('../../controllers/UserControlle
 
 /* GET home page. */
 router.post('/', createUser);
-
 router.get('/', getAll);
-
 router.post('/login', loginUser);
 
 module.exports = router;

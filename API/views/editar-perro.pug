@@ -1,0 +1,61 @@
+extends layout
+
+block navigation 
+  .nav 
+    a#nav-page(href='/') Usuarios
+    a#current(href='/perros') Perros
+
+block content
+  main
+    h2 Perros
+    #form-container
+      form#dog-info(method='POST' action='#')
+        .double-input 
+          input#name.double(name='name' type='text' maxlength='30' value=current.name required)
+          input#breed.double(name='breed' type='text' maxlength='30' value=current.breed required)
+        .double-input 
+          input#color.double(name='color' type='text' value=current.color maxlength='30' required)
+          input#weight.double(name='weight' type='number' min='1' value=current.weight required)
+        .double-input 
+          .label-input.double
+            label(for='birth') Fecha de nacimiento
+            input#birth(name='birth' type='date' value=current.birth required)
+          .label-input.double
+            label(for='size') Tamaño
+            select#size(name='size' value=current.size required)
+              if current.size == 1
+                option(value='1' selected) Pequeño
+                option(value='2') Mediano
+                option(value='3') Grande
+              else if current.size == 2
+                option(value='1') Pequeño
+                option(value='2' selected) Mediano
+                option(value='3') Grande
+              else
+                option(value='1') Pequeño
+                option(value='2') Mediano
+                option(value='3' selected) Grande
+        .double-input 
+          .radio-container
+            if current.female
+              div
+                input#female(type='radio' name='female' checked value='true')
+                label(for='female') Hembra
+              div
+                  input#male(type='radio' name='female' value='false')
+                  label(for='male') Macho
+            else
+              div
+                input#female(type='radio' name='female' value='true')
+                label(for='female') Hembra
+              div
+                  input#male(type='radio' name='female' checked value='false')
+                  label(for='male') Macho
+          #check
+            if current.sterilized
+              input#sterilized(class='double' type='checkbox' name='sterilized' checked value='true')
+              label(for='sterilized') Esterilizado/a
+            else
+              input#sterilized(class='double' type='checkbox' name='sterilized' value='false')
+              label(for='sterilized') Esterilizado/a
+        button#submit-btn(type='submit' form='dog-info') ACTUALIZAR
