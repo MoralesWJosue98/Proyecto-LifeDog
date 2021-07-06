@@ -16,4 +16,8 @@
     <dimen name="small_font">12sp</dimen>
     <dimen name="extra_small_font">10sp</dimen>
     <dimen name="xxl_gap">80dp</dimen>
+    <dimen name="default_setting">94dp</dimen>
+    <dimen name="settings_switch">48dp</dimen>
+    <dimen name="radiobtn_setting">56dp</dimen>
+    <dimen name="expenses_food">15dp</dimen>
 </resources>

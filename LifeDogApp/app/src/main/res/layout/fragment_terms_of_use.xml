@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/pale_gray"
+    tools:context=".ui.DogDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/aqua_200"
+        tools:context=".ui.PrivacyPolicy">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="89dp"
+            android:layout_height="109dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/ic_logo"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/appNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Life Dog -"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/dark_blue"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.156"
+            app:layout_constraintStart_toEndOf="@+id/logoImageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/appNameTextView2"
+            android:layout_width="273dp"
+            android:layout_height="55dp"
+            android:text="Términos de uso"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/dark_blue"
+            android:textSize="29dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/logoImageView"
+            app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appNameTextView2" />
+
+
+
+
+        <TextView
+            android:id="@+id/sloganTextView"
+
+            android:layout_width="364dp"
+            android:layout_height="377dp"
+            android:layout_marginStart="@dimen/small_gap"
+            android:layout_marginTop="@dimen/default_gap"
+            android:layout_marginEnd="@dimen/small_gap"
+            android:layout_marginBottom="@dimen/default_gap"
+            android:text="Estos Términos y Condiciones de Uso regulan las reglas a que se sujeta la
+utilización de la aplicación Dog Life. La descarga de la aplicación atribuye la condición de
+Usuario a quien lo haga e implica la aceptación de todas las condicione incluidas en este documento
+y en la Política de Privacidad.\n\
+En cuanto a las estadisticas anónimas, la aplicación Dog Life se reserva el derecho a realizar un
+seguimiento de tu actividad en la app y a informar de ello a los servicios estadísticos de terceros,
+para tener una mejor experiencia y un mejor funcionamiento de la aplicación móvil, pues estos datos
+se requieren para poder brindar ciertas especificaciones de consejos de tu amigo canino.\n\
+En cuanto a las estadisticas anónimas, la aplicación Dog Life se reserva el derecho a realizar un
+seguimiento de tu actividad en la app y a informar de ello a los servicios estadísticos de terceros,
+para tener una mejor experiencia y un mejor funcionamiento de la aplicación móvil, pues estos datos
+se requieren para poder brindar ciertas especificaciones de consejos de tu amigo canino."
+            android:textAlignment="inherit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider6"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
