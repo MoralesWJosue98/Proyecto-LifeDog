@@ -27,6 +27,6 @@ interface DewormingDAO {
     /* Seleccionar el listado de desparasitacion */
     @Transaction
     @Query("SELECT * FROM Deworming")
-    fun getDogWithDeworming(): List<DogWithDeworming>
+    fun getDogWithDeworming(): LiveData<List<DogWithDeworming>>
 
 }

@@ -25,10 +25,6 @@ interface HealthDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateMedicine(medicine: Medicine)
 
-    /* Insertar Medication */
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertOrUpdateMedication(medication: Medication)
-
     /* Seleccionar el listado de tipo de medicinas categoría */
     @Query("SELECT * FROM MedicineCategory")
     fun getMedicineCategory(): LiveData<List<MedicineCategory>>

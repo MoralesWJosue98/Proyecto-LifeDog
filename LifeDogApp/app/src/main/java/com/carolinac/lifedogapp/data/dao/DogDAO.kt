@@ -39,7 +39,7 @@ interface DogDAO {
 
     /* Seleccionar informacion del perro */
     @Query("SELECT * FROM Dog WHERE dog_id = :dogId")
-    suspend fun getDogInfo(dogId: Int): LiveData<Dog>
+    fun getDogInfo(dogId: Int): LiveData<Dog>
 
     /* Seleccionar el listado de los tamaños de perros */
     @Transaction
