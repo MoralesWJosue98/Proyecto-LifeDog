@@ -8,7 +8,7 @@ import java.util.*
 @Entity
 data class Term(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "haircut_id")
+    @ColumnInfo(name = "term_id")
     var termId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var term: String,

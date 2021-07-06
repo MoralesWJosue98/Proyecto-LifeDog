@@ -25,6 +25,18 @@ interface DogDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateDogWalk(dogWalk: DogWalk)
 
+    /* TODO:
+    * Insertar Allergy
+    */
+
+    /* TODO:
+    * Insertar Disease
+    */
+
+    /* TODO:
+    * Insertar Medication
+    */
+
     /* Seleccionar informacion del perro */
     @Query("SELECT * FROM Dog WHERE dog_id = :dogId")
     suspend fun getDogInfo(dogId: Int): LiveData<Dog>
@@ -49,4 +61,15 @@ interface DogDAO {
     @Query("SELECT * FROM UserXDog")
     fun getDogUser() : LiveData<List<DogWithUserXDog>>
 
+    /* TODO:
+    * Seleccionar el listado de alergias de un perro
+    */
+
+    /* TODO:
+    * Seleccionar el listado de enfermedades de un perro
+    */
+
+    /* TODO:
+    * Seleccionar el listado de medicamentos de un perro
+    */
 }

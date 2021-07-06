@@ -18,6 +18,10 @@ interface ExpenseDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrReplaceAccesoriesExpense(accesoriesExpense: AccesoriesExpense)
 
+    /* TODO:
+    * Insertar CareExpenses
+    */
+
     /* Seleccionar el listado del tipo de gastos de medicina */
     @Transaction
     @Query("SELECT * FROM MedicineExpense")
@@ -27,5 +31,9 @@ interface ExpenseDAO {
     @Transaction
     @Query("SELECT * FROM AccesoriesExpense")
     fun getAccesoriesExpense(): LiveData<List<DogWithAccesoriesExpense>>
+
+    /* TODO:
+    * Seleccionar el listado de tipo de gastos por cuidados
+    */
 
 }

@@ -9,8 +9,8 @@ import java.util.*
 @Entity
 data class Medication(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "haircut_id")
-    var HaircutId: Int = 0,
+    @ColumnInfo(name = "medication_id")
+    var medicationId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
     var date: Date,
