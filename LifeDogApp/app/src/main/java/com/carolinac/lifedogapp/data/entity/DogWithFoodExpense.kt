@@ -12,5 +12,5 @@ data class DogWithFoodExpense(
         parentColumn = "dog_id",
         entityColumn = "food_id"
     )
-    var foodExpense: List<FoodExpenseWithFoodCategory>
+    var foodExpense: List<FoodExpenseAndFoodCategory>
 )

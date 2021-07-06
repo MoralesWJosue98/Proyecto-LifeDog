@@ -4,12 +4,12 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 /* Relacion 1 a 1 */
-data class MedicineWithMedicineCategory(
+data class MedicationAndMedicine(
     @Embedded
     val medication: Medication,
     @Relation(
         parentColumn = "medication_id",
-        entityColumn = "medicine_category_id"
+        entityColumn = "medicine_id"
     )
-    val medicineCategory: MedicineCategory
+    val medicine: Medicine
 )

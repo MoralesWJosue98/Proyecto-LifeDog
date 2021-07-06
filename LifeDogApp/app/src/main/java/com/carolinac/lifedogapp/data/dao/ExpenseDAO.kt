@@ -27,7 +27,7 @@ interface ExpenseDAO {
     /* Seleccionar el listado del tipo de gastos de accesorios */
     @Transaction
     @Query("SELECT * FROM AccesoriesExpense")
-    fun getAccesoriesExpense(): LiveData<List<DogWithAccesoriesExpense>>
+    fun getAccesoriesExpense(): LiveData<List<DogAndAccesoriesExpense>>
 
     /* Seleccionar el listado de tipo de gastos por cuidados */
     @Transaction

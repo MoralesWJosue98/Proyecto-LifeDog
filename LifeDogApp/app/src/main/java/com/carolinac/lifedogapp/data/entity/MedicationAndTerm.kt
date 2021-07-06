@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 /* Relacion 1 a 1 */
-data class MedicationWithTerm(
+data class MedicationAndTerm(
     @Embedded
     val medication: Medication,
     @Relation(

@@ -4,7 +4,7 @@ import androidx.room.Embedded
 import androidx.room.Relation
 
 /* Relacion 1 a 1*/
-data class DewormingWithDewormerType(
+data class DewormingAndDewormerType(
     @Embedded val deworming: Deworming,
     @Relation(
         parentColumn = "deworming_id",
