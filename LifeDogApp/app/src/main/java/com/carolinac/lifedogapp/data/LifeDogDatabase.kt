@@ -18,6 +18,7 @@ abstract class LifeDogDatabase : RoomDatabase() {
     abstract fun activityDao(): ActivityDAO
     abstract fun dewormingDao(): DewormingDAO
     abstract fun dogDao(): DogDAO
+    abstract fun expenseDao(): ExpenseDAO
     abstract fun foodDao(): FoodDAO
     abstract fun healthDao(): HealthDAO
     abstract fun userDao(): UserDAO
