@@ -1,9 +1,10 @@
 package com.carolinac.lifedogapp.data.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
+import androidx.lifecycle.LiveData
+import androidx.room.*
+import com.carolinac.lifedogapp.data.entity.DogWithFoodExpense
 import com.carolinac.lifedogapp.data.entity.Feeding
+import com.carolinac.lifedogapp.data.entity.FoodCategory
 import com.carolinac.lifedogapp.data.entity.FoodExpense
 
 @Dao
@@ -24,19 +25,13 @@ interface FoodDAO {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertOrIgnoreFeeding(feeding: Feeding)
 
-    /*
-   * TODO:
-   * Seleccionar el listado del tipo de las categorias de comida
-   * */
+    /* Seleccionar el listado del tipo de las categorias de comida */
+    @Transaction
+    @Query("SELECT * FROM FoodCategory")
+    fun getFoodCategory(): LiveData<List<FoodCategory>>
 
-    /*
-   * TODO:
-   * Seleccionar el listado de gasto de comidas
-   * */
-
-    /*
-   * TODO:
-   * Seleccionar el listado de alimentacion
-   * */
-
+    /* Seleccionar el listado de gasto de comidas */
+    @Transaction
+    @Query("SELECT * FROM FoodExpense")
+    fun getFoodExpense(): LiveData<List<DogWithFoodExpense>>
 }

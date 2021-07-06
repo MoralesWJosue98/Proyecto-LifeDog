@@ -1,9 +1,9 @@
 package com.carolinac.lifedogapp.data.entity
 
+import android.icu.math.BigDecimal
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.math.BigDecimal
 
 @Entity
 data class AccesoriesExpense(

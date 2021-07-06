@@ -6,14 +6,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class FoodExpense(
+data class CareExpenses(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "food_id")
-    var foodId: Int,
+    @ColumnInfo(name = "care_id")
+    var careId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
-    var quantity: Float,
+    var care: String,
     var price: BigDecimal,
-    @ColumnInfo(name = "food_category_id")
-    var foodCategoryId: Int
+    var place: String
 )

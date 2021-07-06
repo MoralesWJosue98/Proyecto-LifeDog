@@ -1,9 +1,10 @@
 package com.carolinac.lifedogapp.data.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import com.carolinac.lifedogapp.data.entity.AccesoriesExpense
+import com.carolinac.lifedogapp.data.entity.DogWithAccesoriesExpense
+import com.carolinac.lifedogapp.data.entity.DogWithMedicineExpense
 import com.carolinac.lifedogapp.data.entity.MedicineExpense
 
 @Dao
@@ -17,14 +18,14 @@ interface ExpenseDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrReplaceAccesoriesExpense(accesoriesExpense: AccesoriesExpense)
 
-    /*
-   * TODO:
-   * Seleccionar el listado del tipo de gastos de medicina
-   * */
+    /* Seleccionar el listado del tipo de gastos de medicina */
+    @Transaction
+    @Query("SELECT * FROM MedicineExpense")
+    fun getMedicineExpense(): LiveData<List<DogWithMedicineExpense>>
 
-    /*
-   * TODO:
-   * Seleccionar el listado del tipo de gastos de accesorios
-   * */
+    /* Seleccionar el listado del tipo de gastos de accesorios */
+    @Transaction
+    @Query("SELECT * FROM AccesoriesExpense")
+    fun getAccesoriesExpense(): LiveData<List<DogWithAccesoriesExpense>>
 
 }

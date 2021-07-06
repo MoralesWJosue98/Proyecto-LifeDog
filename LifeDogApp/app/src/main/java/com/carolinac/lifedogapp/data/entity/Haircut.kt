@@ -1,19 +1,18 @@
 package com.carolinac.lifedogapp.data.entity
 
-import android.icu.math.BigDecimal
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 @Entity
-data class FoodExpense(
+data class Haircut(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "food_id")
-    var foodId: Int,
+    @ColumnInfo(name = "haircut_id")
+    var HaircutId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
-    var quantity: Float,
-    var price: BigDecimal,
-    @ColumnInfo(name = "food_category_id")
-    var foodCategoryId: Int
+    var date: Date,
+    var repeat: Int,
+    var remember: Boolean
 )
