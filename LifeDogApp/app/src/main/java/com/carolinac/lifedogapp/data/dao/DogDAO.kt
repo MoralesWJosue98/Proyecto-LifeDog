@@ -25,17 +25,17 @@ interface DogDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateDogWalk(dogWalk: DogWalk)
 
-    /* TODO:
-    * Insertar Allergy
-    */
+    /* Insertar Allergy */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateDogAllergy(allergy: Allergy)
 
-    /* TODO:
-    * Insertar Disease
-    */
+    /* Insertar Disease */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateDogDisease(disease: Disease)
 
-    /* TODO:
-    * Insertar Medication
-    */
+    /* Insertar Medication */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateDogMedication(medication: Medication)
 
     /* Seleccionar informacion del perro */
     @Query("SELECT * FROM Dog WHERE dog_id = :dogId")
@@ -59,17 +59,20 @@ interface DogDAO {
     /* Seleccionar los usuarios de un perro */
     @Transaction
     @Query("SELECT * FROM UserXDog")
-    fun getDogUser() : LiveData<List<DogWithUserXDog>>
+    fun getDogUser(): LiveData<List<DogWithUserXDog>>
 
-    /* TODO:
-    * Seleccionar el listado de alergias de un perro
-    */
+    /* Seleccionar el listado de alergias de un perro */
+    @Transaction
+    @Query("SELECT * FROM Allergy")
+    fun getDogAllergy(): LiveData<List<DogWithAllergy>>
 
-    /* TODO:
-    * Seleccionar el listado de enfermedades de un perro
-    */
+    /* Seleccionar el listado de enfermedades de un perro */
+    @Transaction
+    @Query("SELECT * FROM Disease")
+    fun getDogDiseases(): LiveData<List<DogWithDiseases>>
 
-    /* TODO:
-    * Seleccionar el listado de medicamentos de un perro
-    */
+    /* Seleccionar el listado de medicamentos de un perro */
+    @Transaction
+    @Query("SELECT * FROM Medication")
+    fun getDogMedication(): LiveData<List<DogWithMedication>>
 }

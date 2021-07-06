@@ -2,10 +2,7 @@ package com.carolinac.lifedogapp.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.carolinac.lifedogapp.data.entity.AccesoriesExpense
-import com.carolinac.lifedogapp.data.entity.DogWithAccesoriesExpense
-import com.carolinac.lifedogapp.data.entity.DogWithMedicineExpense
-import com.carolinac.lifedogapp.data.entity.MedicineExpense
+import com.carolinac.lifedogapp.data.entity.*
 
 @Dao
 interface ExpenseDAO {
@@ -18,9 +15,9 @@ interface ExpenseDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrReplaceAccesoriesExpense(accesoriesExpense: AccesoriesExpense)
 
-    /* TODO:
-    * Insertar CareExpenses
-    */
+    /* Insertar CareExpenses */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrReplaceCareExpense(careExpenses: CareExpenses)
 
     /* Seleccionar el listado del tipo de gastos de medicina */
     @Transaction
@@ -32,8 +29,9 @@ interface ExpenseDAO {
     @Query("SELECT * FROM AccesoriesExpense")
     fun getAccesoriesExpense(): LiveData<List<DogWithAccesoriesExpense>>
 
-    /* TODO:
-    * Seleccionar el listado de tipo de gastos por cuidados
-    */
+    /* Seleccionar el listado de tipo de gastos por cuidados */
+    @Transaction
+    @Query("SELECT * FROM CareExpenses")
+    fun getCareExpense(): LiveData<List<DogWithCareExpenses>>
 
 }
