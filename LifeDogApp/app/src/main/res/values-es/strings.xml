@@ -169,4 +169,15 @@
         <item>Vitaminas y suplementos</item>
         <item>Otros</item>
     </string-array>
+    <string name="reinforcement">Refuerzo</string>
+    <string name="title_add">Añadir</string>
+    <string name="quantities">Cantidad</string>
+    <string name="title_next_meals">Alimentos próximos</string>
+    <string name="Terms_of_use">Términos de uso</string>
+    <string name="System_theme">Tema Sistema</string>
+    <string name="food">Alimento</string>
+    <string name="toilets">Baños</string>
+    <string name="inquiries">Consultas</string>
+    <string name="kilos">Kilos</string>
+    <string name="cookie">Galleta</string>
 </resources>

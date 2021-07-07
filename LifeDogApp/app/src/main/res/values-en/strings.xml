@@ -173,4 +173,15 @@
         <item>Internal dewormer</item>
         <item>External dewormer</item>
     </string-array>
+    <string name="reinforcement">Reinforcement</string>
+    <string name="title_add">Add</string>
+    <string name="quantities">Quantities</string>
+    <string name="title_next_meals">Next Meals</string>
+    <string name="Terms_of_use">Terms of use</string>
+    <string name="System_theme">System theme</string>
+    <string name="food">Food</string>
+    <string name="toilets">Toilets</string>
+    <string name="inquiries">Inquiries</string>
+    <string name="kilos">Kilos</string>
+    <string name="cookie">Cookie</string>
 </resources>

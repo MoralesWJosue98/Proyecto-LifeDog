@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:text="Añadir"
+            android:text="@string/title_add"
             android:textColor="#000133"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textStyle="bold"
@@ -79,11 +79,10 @@
             android:id="@+id/textView22"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lugar (opcional)"
+            android:layout_marginStart="@dimen/settings_switch"
+            android:text="@string/optional_place"
             android:textColor="@color/dark_blue"
             app:layout_constraintBottom_toTopOf="@+id/lugarCareful"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.243"
             app:layout_constraintStart_toEndOf="@+id/imageView14"
             app:layout_constraintTop_toBottomOf="@+id/conceptoCareful"
             app:layout_constraintVertical_bias="0.526"
@@ -109,11 +108,20 @@
             app:layout_constraintTop_toBottomOf="@+id/divider6"
             tools:ignore="MissingConstraints" />
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+
         <EditText
             android:id="@+id/precioCareful"
             android:layout_width="108dp"
             android:layout_height="42dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="28dp"
             android:background="@drawable/custom_input_anadir"
             android:drawableStart="@drawable/ic_dollar_symbol"
             android:drawablePadding="10dp"
@@ -124,9 +132,7 @@
             android:padding="@dimen/input_padding"
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.894"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lugarCareful"
             app:layout_constraintTop_toBottomOf="@+id/lugarCareful"
             tools:ignore="MissingConstraints" />
 
@@ -149,7 +155,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
             android:backgroundTint="@color/dark_blue"
-            android:text="Añadir"
+            android:text="@string/btn_add"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             app:cornerRadius="@dimen/corner_radius"
@@ -164,7 +170,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Historial"
+            android:text="@string/title_history"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000133"
             android:textStyle="bold"
@@ -191,25 +197,22 @@
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Concepto"
+            android:layout_marginStart="@dimen/settings_switch"
+            android:text="@string/concept"
             android:textColor="@color/dark_blue"
             app:layout_constraintBottom_toTopOf="@+id/conceptoCareful"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.451"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/divider6"
-            app:layout_constraintVertical_bias="0.862" />
+            app:layout_constraintStart_toEndOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
         <TextView
             android:id="@+id/textView40"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Precio"
+            android:layout_marginStart="@dimen/hint_font_size"
+            android:text="@string/price"
             android:textColor="@color/dark_blue"
             app:layout_constraintBottom_toTopOf="@+id/precioCareful"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.752"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/precioCareful"
             app:layout_constraintTop_toBottomOf="@+id/lugarCareful"
             app:layout_constraintVertical_bias="1.0" />
 
