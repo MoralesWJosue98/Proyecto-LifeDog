@@ -15,7 +15,7 @@ data class Dog(
     var female: Boolean,
     var weight: Float,
     var color: String,
-    var birth: Date,
+    var birth: Date?,
     var sterilized: Boolean,
     @ColumnInfo(name = "size_id")
     var sizeId: Int

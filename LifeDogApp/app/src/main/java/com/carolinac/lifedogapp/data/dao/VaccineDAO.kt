@@ -1,12 +1,10 @@
 package com.carolinac.lifedogapp.data.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Transaction
+import androidx.room.*
 import com.carolinac.lifedogapp.data.entity.*
 
+@Dao
 interface VaccineDAO {
 
     /*

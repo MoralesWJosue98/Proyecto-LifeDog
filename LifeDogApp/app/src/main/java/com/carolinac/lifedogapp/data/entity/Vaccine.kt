@@ -13,8 +13,8 @@ data class Vaccine(
     var vaccineId: Int,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
-    var date: Date,
-    var time: Time,
+    var date: Date?,
+    var time: Time?,
     var clinic: String,
     var remember: Boolean,
     @ColumnInfo(name = "category_id")

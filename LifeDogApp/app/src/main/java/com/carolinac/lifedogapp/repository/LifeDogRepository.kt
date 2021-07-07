@@ -45,7 +45,7 @@ class LifeDogRepository(
     fun findSize(): LiveData<List<Size>> = dogDao.getSize()
     fun findAllDogBath(): LiveData<List<DogWithBath>> = dogDao.getDogBath()
     fun findAllDogWalk(): LiveData<List<DogWithDogWalk>> = dogDao.getDogWalk()
-    fun findAllUserDog(): LiveData<List<DogWithUserXDog>> = dogDao.getDogUser()
+    /*fun findAllUserDog(): LiveData<List<DogWithUserXDog>> = dogDao.getDogUser()*/
     fun findAllDogAllergy(): LiveData<List<DogWithAllergy>> = dogDao.getDogAllergy()
     fun findAllDogDisease(): LiveData<List<DogWithDiseases>> = dogDao.getDogDiseases()
     fun findAllDogMedication(): LiveData<List<DogWithMedication>> = dogDao.getDogMedication()
@@ -86,7 +86,7 @@ class LifeDogRepository(
 
     /* UserDAO */
     suspend fun insertUser(user: User) = userDao.insertOrUpdateUser(user)
-    fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()
+    /*fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()*/
 
     /* VaccineDAO */
     /*TODO: suspend fun insertVaccineCategory*/
