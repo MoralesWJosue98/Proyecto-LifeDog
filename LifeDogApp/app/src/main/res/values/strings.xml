@@ -179,5 +179,9 @@
         <item>Desparasitante externo</item>
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_home">Principal</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_calendar">Calendario</string>
+    <string name="menu_expenses">Gastos</string>
+    <string name="menu_settings">Configuración</string>
 </resources>
