@@ -13,15 +13,12 @@ import androidx.navigation.findNavController
 import com.carolinac.lifedogapp.R
 
 class ExpensesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-    lateinit var navController: NavController
-    lateinit var expensesFoodBtn: LinearLayout
-    lateinit var expensesAccesoriesBtn: LinearLayout
-    lateinit var expensesMedicinesBtn: LinearLayout
-    lateinit var expensesCareBtn: LinearLayout
-    lateinit var expensesVaccinesBtn: LinearLayout
+    private lateinit var navController: NavController
+    private lateinit var expensesFoodBtn: LinearLayout
+    private lateinit var expensesAccesoriesBtn: LinearLayout
+    private lateinit var expensesMedicinesBtn: LinearLayout
+    private lateinit var expensesCareBtn: LinearLayout
+    private lateinit var expensesVaccinesBtn: LinearLayout
     private lateinit var spinner: Spinner
 
     override fun onCreateView(

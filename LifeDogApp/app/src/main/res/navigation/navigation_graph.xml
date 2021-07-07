@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/expensesFragment">
+    app:startDestination="@id/initialFragment">
 
     <fragment
         android:id="@+id/mainDogProfileFragment"
@@ -34,6 +34,9 @@
         <action
             android:id="@+id/action_mainDogProfileFragment_to_vaccinesFragment"
             app:destination="@id/vaccinesFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_dogDetailsFragment2"
+            app:destination="@id/dogDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFormFragment"
@@ -91,6 +94,11 @@
         android:name="com.carolinac.lifedogapp.ui.HaircutsFragment"
         android:label="fragment_haircuts"
         tools:layout="@layout/fragment_haircuts" />
+    <fragment
+        android:id="@+id/dogDetailsFragment"
+        android:name="com.carolinac.lifedogapp.ui.DogDetailsFragment"
+        android:label="fragment_dog_details"
+        tools:layout="@layout/fragment_dog_details" />
     <fragment
         android:id="@+id/vetVisitsFragment"
         android:name="com.carolinac.lifedogapp.ui.VetVisitsFragment"
@@ -153,7 +161,20 @@
         android:id="@+id/settingFragment"
         android:name="com.carolinac.lifedogapp.ui.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" />
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_settingFragment_to_privacyPolicy2"
+            app:destination="@id/privacyPolicy2" />
+        <action
+            android:id="@+id/action_settingFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_deleteAccountFragment"
+            app:destination="@id/deleteAccountFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_termsOfUse"
+            app:destination="@id/termsOfUse" />
+    </fragment>
     <fragment
         android:id="@+id/feeding"
         android:name="com.carolinac.lifedogapp.ui.Feeding"
@@ -204,4 +225,24 @@
         android:name="com.carolinac.lifedogapp.ui.ExpensesVaccines"
         android:label="fragment_expenses_vaccines"
         tools:layout="@layout/fragment_expenses_vaccines" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.carolinac.lifedogapp.ui.changePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="com.carolinac.lifedogapp.ui.DeleteAccountFragment"
+        android:label="fragment_delete_account"
+        tools:layout="@layout/fragment_delete_account" />
+    <fragment
+        android:id="@+id/termsOfUse"
+        android:name="com.carolinac.lifedogapp.ui.TermsOfUse"
+        android:label="fragment_terms_of_use"
+        tools:layout="@layout/fragment_terms_of_use" />
+    <fragment
+        android:id="@+id/calendarFragment"
+        android:name="com.carolinac.lifedogapp.ui.CalendarFragment"
+        android:label="fragment_calendar"
+        tools:layout="@layout/fragment_calendar" />
 </navigation>
