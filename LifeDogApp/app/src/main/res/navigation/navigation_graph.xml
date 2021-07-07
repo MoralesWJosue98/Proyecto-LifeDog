@@ -6,47 +6,10 @@
     app:startDestination="@id/initialFragment">
 
     <fragment
-        android:id="@+id/mainDogProfileFragment"
-        android:name="com.carolinac.lifedogapp.ui.MainDogProfileFragment"
-        android:label="fragment_main_dog_profile"
-        tools:layout="@layout/fragment_main_dog_profile" >
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_feeding"
-            app:destination="@id/feeding" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_dogWalksFragment"
-            app:destination="@id/dogWalksFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_toilets"
-            app:destination="@id/toilets" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_haircutsFragment"
-            app:destination="@id/haircutsFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_medicinesFragment"
-            app:destination="@id/medicinesFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_dewormingFragment"
-            app:destination="@id/dewormingFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_vetVisitsFragment"
-            app:destination="@id/vetVisitsFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_vaccinesFragment"
-            app:destination="@id/vaccinesFragment" />
-        <action
-            android:id="@+id/action_mainDogProfileFragment_to_dogDetailsFragment2"
-            app:destination="@id/dogDetailsFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/signUpFormFragment"
         android:name="com.carolinac.lifedogapp.ui.SignUpFormFragment"
         android:label="fragment_sign_up_form"
-        tools:layout="@layout/fragment_sign_up_form" >
-        <action
-            android:id="@+id/action_signUpFormFragment_to_dogProfilesFragment2"
-            app:destination="@id/dogProfilesFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_sign_up_form" />
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.carolinac.lifedogapp.ui.LoginFragment"
@@ -59,8 +22,8 @@
             android:id="@+id/action_loginFragment_to_resetPassword1Fragment"
             app:destination="@id/resetPassword1Fragment" />
         <action
-            android:id="@+id/action_loginFragment_to_dogProfilesFragment2"
-            app:destination="@id/dogProfilesFragment" />
+            android:id="@+id/action_loginFragment_to_homeProfilesNavContainer"
+            app:destination="@id/homeProfilesNavContainer" />
     </fragment>
     <fragment
         android:id="@+id/resetPassword1Fragment"
@@ -90,159 +53,8 @@
             app:destination="@id/loginFragment" />
     </fragment>
     <fragment
-        android:id="@+id/haircutsFragment"
-        android:name="com.carolinac.lifedogapp.ui.HaircutsFragment"
-        android:label="fragment_haircuts"
-        tools:layout="@layout/fragment_haircuts" />
-    <fragment
-        android:id="@+id/dogDetailsFragment"
-        android:name="com.carolinac.lifedogapp.ui.DogDetailsFragment"
-        android:label="fragment_dog_details"
-        tools:layout="@layout/fragment_dog_details" />
-    <fragment
-        android:id="@+id/vetVisitsFragment"
-        android:name="com.carolinac.lifedogapp.ui.VetVisitsFragment"
-        android:label="fragment_vet_visits"
-        tools:layout="@layout/fragment_vet_visits" />
-    <fragment
-        android:id="@+id/expensesFragment"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesFragment"
-        android:label="fragment_expenses"
-        tools:layout="@layout/fragment_expenses" >
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesMedicine"
-            app:destination="@id/expensesMedicine" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesCosts"
-            app:destination="@id/expensesCosts" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesCareful"
-            app:destination="@id/expensesCareful" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesMedicine2"
-            app:destination="@id/expensesMedicine" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesFood"
-            app:destination="@id/expensesFood" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesVaccines"
-            app:destination="@id/expensesVaccines" />
-        <action
-            android:id="@+id/action_expensesFragment_to_expensesCareful2"
-            app:destination="@id/expensesCareful" />
-    </fragment>
-    <fragment
-        android:id="@+id/dewormingFragment"
-        android:name="com.carolinac.lifedogapp.ui.DewormingFragment"
-        android:label="fragment_deworming"
-        tools:layout="@layout/fragment_deworming" />
-    <fragment
-        android:id="@+id/toilets"
-        android:name="com.carolinac.lifedogapp.ui.Toilets"
-        android:label="fragment_toilets"
-        tools:layout="@layout/fragment_toilets" />
-    <fragment
-        android:id="@+id/privacyPolicy2"
-        android:name="com.carolinac.lifedogapp.ui.PrivacyPolicy"
-        android:label="fragment_privacy_policy"
-        tools:layout="@layout/fragment_privacy_policy" />
-    <fragment
-        android:id="@+id/dogProfilesFragment"
-        android:name="com.carolinac.lifedogapp.ui.DogProfilesFragment"
-        android:label="DogProfilesFragment" >
-        <action
-            android:id="@+id/action_dogProfilesFragment2_to_mainDogProfileFragment"
-            app:destination="@id/mainDogProfileFragment" />
-        <action
-            android:id="@+id/action_dogProfilesFragment2_to_addDogFormFragment"
-            app:destination="@id/addDogFormFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.carolinac.lifedogapp.ui.SettingFragment"
-        android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" >
-        <action
-            android:id="@+id/action_settingFragment_to_privacyPolicy2"
-            app:destination="@id/privacyPolicy2" />
-        <action
-            android:id="@+id/action_settingFragment_to_changePasswordFragment"
-            app:destination="@id/changePasswordFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_deleteAccountFragment"
-            app:destination="@id/deleteAccountFragment" />
-        <action
-            android:id="@+id/action_settingFragment_to_termsOfUse"
-            app:destination="@id/termsOfUse" />
-    </fragment>
-    <fragment
-        android:id="@+id/feeding"
-        android:name="com.carolinac.lifedogapp.ui.Feeding"
-        android:label="fragment_feeding"
-        tools:layout="@layout/fragment_feeding" />
-    <fragment
-        android:id="@+id/dogWalksFragment"
-        android:name="com.carolinac.lifedogapp.ui.DogWalksFragment"
-        android:label="fragment_dog_walks"
-        tools:layout="@layout/fragment_dog_walks" />
-    <fragment
-        android:id="@+id/addDogFormFragment"
-        android:name="com.carolinac.lifedogapp.ui.AddDogFormFragment"
-        android:label="fragment_add_dog_form"
-        tools:layout="@layout/fragment_add_dog_form" />
-    <fragment
-        android:id="@+id/medicinesFragment"
-        android:name="com.carolinac.lifedogapp.ui.MedicinesFragment"
-        android:label="fragment_medicines"
-        tools:layout="@layout/fragment_medicines" />
-    <fragment
-        android:id="@+id/vaccinesFragment"
-        android:name="com.carolinac.lifedogapp.ui.VaccinesFragment"
-        android:label="fragment_vaccines"
-        tools:layout="@layout/fragment_vaccines" />
-    <fragment
-        android:id="@+id/expensesCareful"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesCareful"
-        android:label="fragment_expenses_careful"
-        tools:layout="@layout/fragment_expenses_careful" />
-    <fragment
-        android:id="@+id/expensesCosts"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesCosts"
-        android:label="fragment_expenses_costs"
-        tools:layout="@layout/fragment_expenses_costs" />
-    <fragment
-        android:id="@+id/expensesFood"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesFood"
-        android:label="fragment_expenses_food"
-        tools:layout="@layout/fragment_expenses_food" />
-    <fragment
-        android:id="@+id/expensesMedicine"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesMedicine"
-        android:label="fragment_expenses_medicine"
-        tools:layout="@layout/fragment_expenses_medicine" />
-    <fragment
-        android:id="@+id/expensesVaccines"
-        android:name="com.carolinac.lifedogapp.ui.ExpensesVaccines"
-        android:label="fragment_expenses_vaccines"
-        tools:layout="@layout/fragment_expenses_vaccines" />
-    <fragment
-        android:id="@+id/changePasswordFragment"
-        android:name="com.carolinac.lifedogapp.ui.changePasswordFragment"
-        android:label="fragment_change_password"
-        tools:layout="@layout/fragment_change_password" />
-    <fragment
-        android:id="@+id/deleteAccountFragment"
-        android:name="com.carolinac.lifedogapp.ui.DeleteAccountFragment"
-        android:label="fragment_delete_account"
-        tools:layout="@layout/fragment_delete_account" />
-    <fragment
-        android:id="@+id/termsOfUse"
-        android:name="com.carolinac.lifedogapp.ui.TermsOfUse"
-        android:label="fragment_terms_of_use"
-        tools:layout="@layout/fragment_terms_of_use" />
-    <fragment
-        android:id="@+id/calendarFragment"
-        android:name="com.carolinac.lifedogapp.ui.CalendarFragment"
-        android:label="fragment_calendar"
-        tools:layout="@layout/fragment_calendar" />
+        android:id="@+id/homeProfilesNavContainer"
+        android:name="com.carolinac.lifedogapp.ui.HomeProfilesNavContainer"
+        android:label="fragment_home_profiles_nav_container"
+        tools:layout="@layout/fragment_home_profiles_nav_container" />
 </navigation>

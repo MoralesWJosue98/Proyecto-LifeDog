@@ -38,7 +38,7 @@ class LoginFragment : Fragment() {
 
     private fun setListeners() {
         loginButton.setOnClickListener {
-            navController.navigate(R.id.action_loginFragment_to_dogProfilesFragment2)
+            navController.navigate(R.id.action_loginFragment_to_homeProfilesNavContainer)
         }
         signUpButton.setOnClickListener {
             navController.navigate(R.id.action_loginFragment_to_signUpFormFragment)

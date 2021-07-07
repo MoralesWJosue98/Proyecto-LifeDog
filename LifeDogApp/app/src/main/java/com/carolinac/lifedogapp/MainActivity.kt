@@ -7,7 +7,7 @@ import android.widget.Spinner
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.carolinac.lifedogapp.ui.ExpensesFragment
+import com.carolinac.lifedogapp.ui.*
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -19,8 +19,28 @@ class MainActivity : AppCompatActivity() {
 
         bottomNav.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.expensesFragment -> {
-                    val fragment = ExpensesFragment.newInstance()
+                R.id.HomeProfilesNavContainer -> {
+                    val fragment = HomeProfilesNavContainer.newInstance()
+                    openFragment(fragment)
+                    true
+                }
+                R.id.DogProfileNavContainer -> {
+                    val fragment = DogProfileNavContainer.newInstance()
+                    openFragment(fragment)
+                    true
+                }
+                R.id.calendarFragment -> {
+                    val fragment = CalendarFragment.newInstance()
+                    openFragment(fragment)
+                    true
+                }
+                R.id.expensesNavContainer -> {
+                    val fragment = ExpensesNavContainer.newInstance()
+                    openFragment(fragment)
+                    true
+                }
+                R.id.settingsNavContainer -> {
+                    val fragment = SettingsNavContainer.newInstance()
                     openFragment(fragment)
                     true
                 }
@@ -35,5 +55,4 @@ class MainActivity : AppCompatActivity() {
         transaction.addToBackStack(null)
         transaction.commit()
     }
-
-    }
+}

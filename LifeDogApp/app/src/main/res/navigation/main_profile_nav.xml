@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_profile_nav"
+    app:startDestination="@id/mainDogProfileFragment">
+
+    <fragment
+        android:id="@+id/vaccinesFragment"
+        android:name="com.carolinac.lifedogapp.ui.VaccinesFragment"
+        tools:layout="@layout/fragment_vaccines"
+        android:label="fragment_vaccines" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_vaccinesFragment"
+        app:destination="@id/vaccinesFragment" />
+    <fragment
+        android:id="@+id/medicinesFragment"
+        android:name="com.carolinac.lifedogapp.ui.MedicinesFragment"
+        tools:layout="@layout/fragment_medicines"
+        android:label="fragment_medicines" />
+    <fragment
+        android:id="@+id/toilets"
+        android:name="com.carolinac.lifedogapp.ui.Toilets"
+        tools:layout="@layout/fragment_toilets"
+        android:label="fragment_toilets" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_vetVisitsFragment"
+        app:destination="@id/vetVisitsFragment" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_haircutsFragment"
+        app:destination="@id/haircutsFragment" />
+    <fragment
+        android:id="@+id/vetVisitsFragment"
+        android:name="com.carolinac.lifedogapp.ui.VetVisitsFragment"
+        tools:layout="@layout/fragment_vet_visits"
+        android:label="fragment_vet_visits" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_dewormingFragment"
+        app:destination="@id/dewormingFragment" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_toilets"
+        app:destination="@id/toilets" />
+    <fragment
+        android:id="@+id/feeding"
+        android:name="com.carolinac.lifedogapp.ui.Feeding"
+        tools:layout="@layout/fragment_feeding"
+        android:label="fragment_feeding" />
+    <fragment
+        android:id="@+id/dogWalksFragment"
+        android:name="com.carolinac.lifedogapp.ui.DogWalksFragment"
+        tools:layout="@layout/fragment_dog_walks"
+        android:label="fragment_dog_walks" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_dogWalksFragment"
+        app:destination="@id/dogWalksFragment" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_feeding"
+        app:destination="@id/feeding" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_dogDetailsFragment2"
+        app:destination="@id/dogDetailsFragment" />
+    <fragment
+        android:id="@+id/mainDogProfileFragment"
+        android:name="com.carolinac.lifedogapp.ui.MainDogProfileFragment"
+        tools:layout="@layout/fragment_main_dog_profile"
+        android:label="fragment_main_dog_profile">
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_feeding"
+            app:destination="@id/feeding" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_dogWalksFragment"
+            app:destination="@id/dogWalksFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_toilets"
+            app:destination="@id/toilets" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_haircutsFragment"
+            app:destination="@id/haircutsFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_medicinesFragment"
+            app:destination="@id/medicinesFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_dewormingFragment"
+            app:destination="@id/dewormingFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_vetVisitsFragment"
+            app:destination="@id/vetVisitsFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_vaccinesFragment"
+            app:destination="@id/vaccinesFragment" />
+        <action
+            android:id="@+id/action_mainDogProfileFragment_to_dogDetailsFragment2"
+            app:destination="@id/dogDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dewormingFragment"
+        android:name="com.carolinac.lifedogapp.ui.DewormingFragment"
+        tools:layout="@layout/fragment_deworming"
+        android:label="fragment_deworming" />
+    <fragment
+        android:id="@+id/dogDetailsFragment"
+        android:name="com.carolinac.lifedogapp.ui.DogDetailsFragment"
+        tools:layout="@layout/fragment_dog_details"
+        android:label="fragment_dog_details" />
+    <fragment
+        android:id="@+id/haircutsFragment"
+        android:name="com.carolinac.lifedogapp.ui.HaircutsFragment"
+        tools:layout="@layout/fragment_haircuts"
+        android:label="fragment_haircuts" />
+    <action
+        android:id="@+id/action_mainDogProfileFragment_to_medicinesFragment"
+        app:destination="@id/medicinesFragment" />
+</navigation>
