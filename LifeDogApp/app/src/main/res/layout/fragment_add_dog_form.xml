@@ -15,12 +15,73 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/tvMedicineDate2"
+                android:layout_width="0dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:background="@drawable/custom_input_aqua"
+                android:drawableStart="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/extra_small_gap"
+                android:elevation="@dimen/default_shadow"
+                android:ems="10"
+                android:hint="@string/hint_date"
+                android:inputType="date"
+                android:padding="@dimen/input_padding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="@+id/tvDetailsGender5"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender5"
+                app:layout_constraintWidth_percent="0.25" />
+
+            <EditText
+                android:id="@+id/tvMedicineHour2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:background="@drawable/custom_input_aqua"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="@dimen/extra_small_gap"
+                android:elevation="@dimen/default_shadow"
+                android:ems="10"
+                android:hint="@string/hint_hour"
+                android:inputType="time"
+                android:padding="@dimen/input_padding"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tvMedicineDate2"
+                app:layout_constraintTop_toBottomOf="@+id/textView64"
+                app:layout_constraintWidth_percent="0.3" />
+
+            <TextView
+                android:id="@+id/textView64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender5"
+                tools:layout_editor_absoluteX="235dp" />
+
+            <TextView
+                android:id="@+id/tvDetailsGender5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/dog_size"
+                android:textColor="?attr/colorOnBackground"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
 
             <TextView
                 android:id="@+id/TextView20"
@@ -132,27 +193,42 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView23" />
 
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="@string/dog_gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText" />
+
             <RadioGroup
                 android:id="@+id/genderRadioGroup"
                 android:layout_width="0dp"
                 android:layout_height="20dp"
-                android:layout_marginTop="12dp"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:layout_marginEnd="@dimen/medium_gap"
+                android:foregroundGravity="fill_horizontal"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText">
+                app:layout_constraintTop_toBottomOf="@+id/textView63">
 
                 <RadioButton
-                    android:id="@+id/radioFemale"
+                    android:id="@+id/radioButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:layout_marginRight="@dimen/medium_gap"
+                    android:text="@string/male_dog" />
 
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="RadioButton" />
+                    android:text="@string/female_dog" />
             </RadioGroup>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

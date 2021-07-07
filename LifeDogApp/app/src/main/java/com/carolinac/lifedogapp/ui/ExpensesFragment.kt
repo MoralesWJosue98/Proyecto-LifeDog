@@ -6,31 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.LinearLayout
 import android.widget.Spinner
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.carolinac.lifedogapp.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [ExpensesFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class ExpensesFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+    private lateinit var navController: NavController
+    private lateinit var expensesFoodBtn: LinearLayout
+    private lateinit var expensesAccesoriesBtn: LinearLayout
+    private lateinit var expensesMedicinesBtn: LinearLayout
+    private lateinit var expensesCareBtn: LinearLayout
+    private lateinit var expensesVaccinesBtn: LinearLayout
     private lateinit var spinner: Spinner
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            //param1 = it.getString(ARG_PARAM1)
-            //param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,21 +31,55 @@ class ExpensesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //Verificar que funcione
+
+        navController = view.findNavController()
+        bind(view)
         fillSpinner(view)
+
+        setListeners()
+    }
+
+    private fun bind(view: View) {
+        expensesFoodBtn = view.findViewById(R.id.expensesFoodBtn)
+        expensesAccesoriesBtn = view.findViewById(R.id.expensesAccesoriesBtn)
+        expensesMedicinesBtn = view.findViewById(R.id.expensesMedicinesBtn)
+        expensesCareBtn = view.findViewById(R.id.expensesCareBtn)
+        expensesVaccinesBtn = view.findViewById(R.id.expensesVaccinesBtn)
+    }
+
+    private fun setListeners() {
+        expensesFoodBtn.setOnClickListener {
+            navController.navigate(R.id.action_expensesFragment_to_expensesFood)
+        }
+        expensesAccesoriesBtn.setOnClickListener {
+            navController.navigate(R.id.action_expensesFragment_to_expensesCosts)
+        }
+        expensesMedicinesBtn.setOnClickListener {
+            navController.navigate(R.id.action_expensesFragment_to_expensesMedicine2)
+        }
+        expensesCareBtn.setOnClickListener {
+            navController.navigate(R.id.action_expensesFragment_to_expensesCareful2)
+        }
+        expensesVaccinesBtn.setOnClickListener {
+            navController.navigate(R.id.action_expensesFragment_to_expensesVaccines)
+        }
     }
 
     private fun fillSpinner(view : View){
-        spinner = view.findViewById(R.id.statistics_time_spinner)
+        spinner = view.findViewById<Spinner>(R.id.statistics_time_spinner)
 
         ArrayAdapter.createFromResource(
             requireContext(),
-            R.array.statistics_array,
+            R.array.time_array,
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = adapter
         }
     }
-}
 
+    companion object {
+        @JvmStatic
+        fun newInstance() : ExpensesFragment = ExpensesFragment()
+    }
+}

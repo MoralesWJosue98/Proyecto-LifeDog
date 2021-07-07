@@ -5,9 +5,11 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-data class DewormerType(
+data class Advices(
     @PrimaryKey
-    @ColumnInfo(name = "dewormer_type_id")
-    var dewormerTypeId: Int,
-    var type: String
+    @ColumnInfo(name = "advice_id")
+    var adviceId: Int,
+    var sizeId: Int,
+    var advice: String,
+    var source: String
 )

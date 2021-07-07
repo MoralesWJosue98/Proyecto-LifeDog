@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="@dimen/extra_small_gap"
-                    android:text="@string/accesories"
+                    android:text="@string/medicines"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
             </LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/signUpFormFragment"
+        android:name="com.carolinac.lifedogapp.ui.SignUpFormFragment"
+        android:label="fragment_sign_up_form"
+        tools:layout="@layout/fragment_sign_up_form" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.carolinac.lifedogapp.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFormFragment"
+            app:destination="@id/signUpFormFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_resetPassword1Fragment"
+            app:destination="@id/resetPassword1Fragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeProfilesNavContainer"
+            app:destination="@id/homeProfilesNavContainer" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassword1Fragment"
+        android:name="com.carolinac.lifedogapp.ui.ResetPassword1Fragment"
+        android:label="fragment_reset_password1"
+        tools:layout="@layout/fragment_reset_password1" >
+        <action
+            android:id="@+id/action_resetPassword1Fragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.carolinac.lifedogapp.ui.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" >
+        <action
+            android:id="@+id/action_newPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.carolinac.lifedogapp.ui.InitialFragment"
+        android:label="fragment_initial"
+        tools:layout="@layout/fragment_initial" >
+        <action
+            android:id="@+id/action_initialFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeProfilesNavContainer"
+        android:name="com.carolinac.lifedogapp.ui.HomeProfilesNavContainer"
+        android:label="fragment_home_profiles_nav_container"
+        tools:layout="@layout/fragment_home_profiles_nav_container" />
+</navigation>

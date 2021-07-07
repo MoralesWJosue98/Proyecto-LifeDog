@@ -6,14 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.ImageButton
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.carolinac.lifedogapp.R
+import kotlin.math.sign
 
-class DogProfilesFragment : Fragment() {
-    private lateinit var addDogButton: ImageButton
-    private lateinit var auxButton: Button
+class LoginFragment : Fragment() {
+    private lateinit var loginButton: Button
+    private lateinit var signUpButton: Button
     private lateinit var navController: NavController
 
     override fun onCreateView(
@@ -21,33 +21,27 @@ class DogProfilesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dog_profiles, container, false)
+        return inflater.inflate(R.layout.fragment_login, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = findNavController()
         bind(view)
-
         setListeners()
     }
 
     private fun bind(view: View) {
-        addDogButton = view.findViewById(R.id.addDogButton)
-        auxButton = view.findViewById(R.id.button2)
+        loginButton = view.findViewById(R.id.loginButton)
+        signUpButton = view.findViewById(R.id.signUpButton)
     }
 
     private fun setListeners() {
-        addDogButton.setOnClickListener {
-            navController.navigate(R.id.action_dogProfilesFragment2_to_addDogFormFragment)
+        loginButton.setOnClickListener {
+            navController.navigate(R.id.action_loginFragment_to_homeProfilesNavContainer)
         }
-        auxButton.setOnClickListener {
-            navController.navigate(R.id.action_dogProfilesFragment_to_dogProfileNavContainer)
+        signUpButton.setOnClickListener {
+            navController.navigate(R.id.action_loginFragment_to_signUpFormFragment)
         }
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() : DogDetailsFragment = DogDetailsFragment()
     }
 }
