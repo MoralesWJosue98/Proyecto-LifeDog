@@ -7,6 +7,18 @@ import com.carolinac.lifedogapp.data.entity.*
 @Dao
 interface DogDAO {
 
+    /* Insertar el consejo tamaño pequeño */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceSmall(advices: List<Advices>)
+
+    /* Insertar el consejo tamaño mediano */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceMedium(advices: List<Advices>)
+
+    /* Insertar el consejo tamaño grande */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceBig(advices: List<Advices>)
+
     /* Insertar el Size */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertOrUpdateSize(size: List<Size>)
