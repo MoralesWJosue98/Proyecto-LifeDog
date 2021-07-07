@@ -2,20 +2,14 @@ package com.carolinac.lifedogapp.data.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.carolinac.lifedogapp.data.entity.DogWithFoodExpense
-import com.carolinac.lifedogapp.data.entity.Feeding
-import com.carolinac.lifedogapp.data.entity.FoodCategory
-import com.carolinac.lifedogapp.data.entity.FoodExpense
+import com.carolinac.lifedogapp.data.entity.*
 
 @Dao
 interface FoodDAO {
 
-    /*
-    * TODO:
-    * Insertar el FoodCategory
-    * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-    * Buscar la forma de obtener esos datos.
-    * */
+    /* Insertar el FoodCategory */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateFoodCategory(foodCategory: List<FoodCategory>)
 
     /* Insertar FoodExpense */
     @Insert(onConflict = OnConflictStrategy.REPLACE)

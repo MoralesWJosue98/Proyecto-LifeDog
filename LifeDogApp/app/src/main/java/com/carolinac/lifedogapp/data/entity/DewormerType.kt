@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity
 data class DewormerType(
-    @PrimaryKey(autoGenerate = true)
+    @PrimaryKey
     @ColumnInfo(name = "dewormer_type_id")
     var dewormerTypeId: Int,
     var type: String
