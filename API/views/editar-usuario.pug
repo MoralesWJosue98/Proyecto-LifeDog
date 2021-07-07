@@ -1,0 +1,15 @@
+extends layout
+
+block navigation
+  a#current(href='/') Usuarios
+  a#nav-page(href='/perros') Perros
+
+block content
+  main
+    h2 Editar usuario
+    #form-container
+      form#user-info(method='POST' action='#')
+        input#username(type='text' name='username' maxlength='50' value=current.username required)
+        input#password(type='password' name='password' maxlength='40' value=current.password placeholder='Contraseña' required)
+        input#email(type='email' name='email' value=current.email maxlength='50')
+        button#submit-btn(type='submit' form='user-info') ACTUALIZAR

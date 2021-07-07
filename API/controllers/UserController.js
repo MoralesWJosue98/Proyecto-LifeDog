@@ -1,10 +1,10 @@
 const User = require('../models/User');
-const debug = require('debug')('Http')
+const debug = require('debug')('Http');
 const { createToken, verifyToken } = require('../utils/jwt');
 
 const UserController = {
     createUser : async (req, res) => {
-        const {user, password, email } = req.body;
+        const { username, password, email } = req.body;
         try{
             const findedUser = await User.findOne({email : email});
             if(findedUser != null){
@@ -12,13 +12,36 @@ const UserController = {
             }
 
             const newUser = new User({
-                username: user,
+                username: username,
                 password: password,
                 email: email
             });
             
             await newUser.save();
             return res.status(201).json({error: false, message: "Usuario creado con éxito."});
+        }
+        catch(err){
+            return res.status(400).json(err)
+        }
+    },
+
+    createUserCrud : async (req, res) => {
+        const { username, password, email } = req.body;
+        console.log(req.body)
+        try{
+            const foundUser = await User.findOne( {email : email} );
+            if(foundUser != null) {
+                throw { error: true, message: "El usuario ya ha sido registrado" }
+            }
+      
+            const newUser = new User({
+                username: username,
+                password: password,
+                email: email
+            });
+            
+            await newUser.save();
+            res.redirect('./');
         }
         catch(err){
             return res.status(400).json(err)
@@ -53,13 +76,54 @@ const UserController = {
     },
 
     getAll: async (req, res) => {
-        try{
+        try {
             const usuarios = await User.find({});
             return res.status(200).json({error: false, usuarios: usuarios});
         }
         catch(err){
-            console.log(err);
             return res.status(400).json(err)
+        }
+    },
+
+    getAllCrud: async (req, res) => {
+        try{
+            const usuarios = await User.find({});
+            res.render('index', { title: 'Usuarios Life Dog', users: usuarios });
+        }
+        catch(err){
+            return res.status(400).json(err)
+        }
+    },
+
+    editUser: async (req, res) => {
+        const { id } = req.params;
+        try {
+            const user = await User.findOne({ _id : id });
+            return res.render('editar-usuario', { title: 'Editar usuario', current: user } )
+        } catch (err) {
+            return res.status(400).json(err);
+        }
+    },
+
+    updateUser: async (req, res) => {
+        const { id } = req.params;
+        const { username, password, email } = req.body;
+        try {
+            await User.updateOne({ _id: id }, { username: username, password: password, email: email });
+            res.redirect('/')
+        } catch (err) {
+            return res.status(400).json(err);
+        }
+    },
+
+    deleteUser: async(req, res) => {
+        try {
+            const { id } = req.params;
+            await User.deleteOne({_id : id});
+            res.redirect('/');
+        }
+        catch(err){
+            return res.status(400).json(err);
         }
     }
 }
