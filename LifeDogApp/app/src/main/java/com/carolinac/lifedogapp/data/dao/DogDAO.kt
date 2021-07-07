@@ -7,11 +7,9 @@ import com.carolinac.lifedogapp.data.entity.*
 @Dao
 interface DogDAO {
 
-    /*TODO:
-    * Insertar el Size
-    * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-    * Buscar la forma de obtener esos datos.
-    * */
+    /* Insertar el Size */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateSize(size: List<Size>)
 
     /* Insertar Bath */
     @Insert(onConflict = OnConflictStrategy.IGNORE)

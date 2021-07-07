@@ -24,7 +24,6 @@ class LifeDogRepository(
         activityDao.getDogConsultation()
 
     /* DewormingDAO */
-    /*TODO: suspend fun insertDewormerType*/
     suspend fun insertDeworming(deworming: Deworming) =
         dewormingDao.insertOrUpdateDeworming(deworming)
 
@@ -32,7 +31,6 @@ class LifeDogRepository(
     fun findAllDogDeworming(): LiveData<List<DogWithDeworming>> = dewormingDao.getDogWithDeworming()
 
     /* DogDAO */
-    /*TODO: suspend fun insertSize*/
     suspend fun insertBath(bath: Bath) = dogDao.insertBath(bath)
     suspend fun insertDog(dog: Dog) = dogDao.insertOrUpdateDog(dog)
     suspend fun insertDogWalk(dogWalk: DogWalk) = dogDao.insertOrUpdateDogWalk(dogWalk)
@@ -69,7 +67,6 @@ class LifeDogRepository(
     fun findAllDogCareExpense(): LiveData<List<DogWithCareExpenses>> = expenseDao.getCareExpense()
 
     /* FoodDAO */
-    /*TODO: suspend fun insertFoodCategory*/
     suspend fun insertFoodExpense(foodExpense: FoodExpense) =
         foodDao.insertOrUpdateFoodExpense(foodExpense)
 
@@ -78,7 +75,6 @@ class LifeDogRepository(
     fun findAllDogFoodExpense(): LiveData<List<DogWithFoodExpense>> = foodDao.getFoodExpense()
 
     /* HealthDAO */
-    /*TODO: suspend fun insertMedicineCategory*/
     suspend fun insertTerm(term: Term) = healthDao.insertOrUpdateTerm(term)
     suspend fun insertMedicine(medicine: Medicine) = healthDao.insertOrUpdateMedicine(medicine)
     fun findAllMedicineCategory(): LiveData<List<MedicineCategory>> =
@@ -89,7 +85,6 @@ class LifeDogRepository(
     fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()
 
     /* VaccineDAO */
-    /*TODO: suspend fun insertVaccineCategory*/
     suspend fun insertVaccineExpense(vaccineExpense: VaccineExpense) =
         vaccineDao.insertOrUpdateVaccineExpense(vaccineExpense)
 
