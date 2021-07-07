@@ -2,6 +2,7 @@ package com.carolinac.lifedogapp
 
 import android.app.Application
 import com.carolinac.lifedogapp.data.LifeDogDatabase
+import com.carolinac.lifedogapp.network.API
 import com.carolinac.lifedogapp.repository.LifeDogRepository
 
 class LifeDogApplication : Application() {
@@ -25,7 +26,8 @@ class LifeDogApplication : Application() {
             foodDao,
             healthDao,
             userDao,
-            vaccineDao
+            vaccineDao,
+            API
         )
     }
 }

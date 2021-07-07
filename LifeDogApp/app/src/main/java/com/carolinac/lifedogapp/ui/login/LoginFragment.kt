@@ -1,4 +1,4 @@
-package com.carolinac.lifedogapp.ui
+package com.carolinac.lifedogapp.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

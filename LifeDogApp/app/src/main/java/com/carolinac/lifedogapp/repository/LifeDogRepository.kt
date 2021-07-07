@@ -1,6 +1,7 @@
 package com.carolinac.lifedogapp.repository
 
 import androidx.lifecycle.LiveData
+import com.carolinac.lifedogapp.network.API
 import com.carolinac.lifedogapp.data.dao.*
 import com.carolinac.lifedogapp.data.entity.*
 
@@ -12,7 +13,8 @@ class LifeDogRepository(
     private val foodDao: FoodDAO,
     private val healthDao: HealthDAO,
     private val userDao: UserDAO,
-    private val vaccineDao: VaccineDAO
+    private val vaccineDao: VaccineDAO,
+    private val api: API
 ) {
     /* ActivityDAO*/
     suspend fun insertHaircut(haircut: Haircut) = activityDao.insertOrUpdateDogHaircut(haircut)
@@ -85,6 +87,10 @@ class LifeDogRepository(
         healthDao.getMedicineCategory()
 
     /* UserDAO */
+    suspend fun loginUser(user: User): Boolean {
+        val token  = api.webservice.login(user)
+        return token.isNullOrBlank()
+    }
     suspend fun insertUser(user: User) = userDao.insertOrUpdateUser(user)
     fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()
 
