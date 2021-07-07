@@ -9,9 +9,9 @@ data class User(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "user_id")
     var userId: Int = 0,
-    var username: String,
+    var username: String = "",
     var password: String,
-    var code: Int?,
+    var code: Int? = null,
     var email: String,
-    var logged: Boolean
+    var logged: Boolean = false
 )

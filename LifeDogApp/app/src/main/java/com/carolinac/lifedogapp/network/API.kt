@@ -1,13 +1,20 @@
 package com.carolinac.lifedogapp.network
 
+import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-private const val POKE_API_BASE_URL = "https://pokeapi.co/api/v2/"
+
+private const val BASE_URL = "https://life-dog.herokuapp.com/"
+
+var gson = GsonBuilder()
+    .setLenient()
+    .create()
 
 private var retrofit = Retrofit.Builder()
-    .baseUrl(POKE_API_BASE_URL)
+    .baseUrl(BASE_URL)
     .addConverterFactory(GsonConverterFactory.create())
+    .addConverterFactory(GsonConverterFactory.create(gson))
     .build()
 
 object API{

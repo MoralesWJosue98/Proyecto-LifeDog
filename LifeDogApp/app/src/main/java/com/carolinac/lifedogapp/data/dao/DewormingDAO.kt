@@ -10,11 +10,9 @@ import com.carolinac.lifedogapp.data.entity.VaccineCategory
 @Dao
 interface DewormingDAO {
 
-    /* TODO:
-   * Insertar el DewormerType
-   * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-   * Buscar la forma de obtener esos datos.
-   * */
+    /* Insertar el DewormerType */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateDewormerType(dewormerType: List<DewormerType>)
 
     /* Insertar Desparasitacion */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -28,5 +26,6 @@ interface DewormingDAO {
     @Transaction
     @Query("SELECT * FROM Deworming")
     fun getDogWithDeworming(): LiveData<List<DogWithDeworming>>
+
 
 }

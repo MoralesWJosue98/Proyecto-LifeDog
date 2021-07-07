@@ -21,7 +21,7 @@ class LoginFragment : Fragment() {
         LoginViewModelFactory(app.lifeDogRepository)
     }
 
-    private val viewmodel : LoginViewModel by viewModels {
+    private val viewModel : LoginViewModel by viewModels {
         factory
     }
 
@@ -40,17 +40,17 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            viewmodel = viewmodel
+            viewmodel = viewModel
             lifecycleOwner = viewLifecycleOwner
         }
 
         navController = view.findNavController()
 
-        viewmodel.error.observe(viewLifecycleOwner){ messageID ->
+        viewModel.error.observe(viewLifecycleOwner){ messageID ->
             val toast = Toast.makeText(activity, getString(messageID!!), Toast.LENGTH_SHORT)
             toast.show()
-            
-            if(viewmodel.userIsLogged()){
+
+            if(viewModel.userIsLogged() == true){
                 //TODO realizar navegacion a partir del navController
             }
         }

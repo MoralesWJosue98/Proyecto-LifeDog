@@ -87,9 +87,9 @@ class LifeDogRepository(
         healthDao.getMedicineCategory()
 
     /* UserDAO */
-    suspend fun loginUser(user: User): Boolean {
-        val token  = api.webservice.login(user)
-        return token.isNullOrBlank()
+    suspend fun loginUser(user: User): User {
+        val user  = api.webservice.login(user)
+        return user
     }
     suspend fun insertUser(user: User) = userDao.insertOrUpdateUser(user)
     fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()

@@ -2,8 +2,10 @@ package com.carolinac.lifedogapp.data
 
 import android.content.Context
 import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.carolinac.lifedogapp.data.dao.*
 import com.carolinac.lifedogapp.data.entity.*
+import java.util.concurrent.Executors
 
 @Database(
     entities = [AccesoriesExpense::class, Allergy::class, Bath::class, CareExpenses::class,
@@ -30,13 +32,37 @@ abstract class LifeDogDatabase : RoomDatabase() {
 
         fun getDatabase(context: Context): LifeDogDatabase {
             return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context,
-                    LifeDogDatabase::class.java, "LifedogDB"
-                ).build()
+                val instance = buildDatabase(context)
                 INSTANCE = instance
                 instance
             }
         }
+
+        private fun buildDatabase(context: Context) =
+            Room.databaseBuilder(
+                context.applicationContext,
+                LifeDogDatabase::class.java, "LifedogDB"
+            )
+                // prepopulate the database after onCreate was called
+                .addCallback(object : Callback() {
+                    override fun onCreate(db: SupportSQLiteDatabase) {
+                        super.onCreate(db)
+                        // insert the data on the IO Thread
+                        ioThread {
+                            getDatabase(context).dewormingDao()
+                                .insertOrUpdateDewormerType(PREPOPULATE_DATA)
+                        }
+                    }
+
+                    private fun ioThread(function: () -> Unit) {
+                        Executors.newSingleThreadExecutor().execute(function)
+                    }
+                })
+                .build()
+
+        val PREPOPULATE_DATA = listOf(
+            DewormerType(1, "Sentry HC WormX Plus "),
+            DewormerType(2, " Beaphar"), DewormerType(3, "Triple Wormer Broad Spectrum")
+        )
     }
 }
