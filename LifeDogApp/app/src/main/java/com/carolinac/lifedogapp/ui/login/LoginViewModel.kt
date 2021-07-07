@@ -9,11 +9,11 @@ import com.carolinac.lifedogapp.repository.LifeDogRepository
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val repository: LifeDogRepository) : ViewModel() {
+    private lateinit var user : User
+
     val email = MutableLiveData("")
     val password = MutableLiveData("")
     val error = MutableLiveData<Int?>()
-    private lateinit var user : User
-
 
     fun login(){
         viewModelScope.launch {
@@ -34,4 +34,7 @@ class LoginViewModel(private val repository: LifeDogRepository) : ViewModel() {
         }
     }
 
+    fun userIsLogged(): Boolean{
+        return user.logged
+    }
 }
