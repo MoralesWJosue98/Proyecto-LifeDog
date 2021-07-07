@@ -7,11 +7,21 @@ import com.carolinac.lifedogapp.data.entity.*
 @Dao
 interface DogDAO {
 
-    /*TODO:
-    * Insertar el Size
-    * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-    * Buscar la forma de obtener esos datos.
-    * */
+    /* Insertar el consejo tamaño pequeño */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceSmall(advices: List<Advices>)
+
+    /* Insertar el consejo tamaño mediano */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceMedium(advices: List<Advices>)
+
+    /* Insertar el consejo tamaño grande */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAdviceBig(advices: List<Advices>)
+
+    /* Insertar el Size */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateSize(size: List<Size>)
 
     /* Insertar Bath */
     @Insert(onConflict = OnConflictStrategy.IGNORE)
@@ -56,10 +66,10 @@ interface DogDAO {
     @Query("SELECT * FROM DogWalk")
     fun getDogWalk(): LiveData<List<DogWithDogWalk>>
 
-    /* Seleccionar los usuarios de un perro */
+    /* Seleccionar los usuarios de un perro
     @Transaction
     @Query("SELECT * FROM UserXDog")
-    fun getDogUser(): LiveData<List<DogWithUserXDog>>
+    fun getDogUser(): LiveData<List<DogWithUserXDog>> */
 
     /* Seleccionar el listado de alergias de un perro */
     @Transaction

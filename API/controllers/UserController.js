@@ -68,7 +68,7 @@ const UserController = {
                 return res.status(409).json({error: "Error al loguearse."});
             }
 
-            return res.status(200).json({error: false, token: token, message: "Usuario logueado con éxito"})
+            return res.status(200).json({username: user.username, password: user.hashedPassword,email: user.email, token: token,code: user.code, logged: true, message: "Usuario logueado con éxito"})
         } catch (err) {
             console.log(err);
             return res.status(400).json(err)

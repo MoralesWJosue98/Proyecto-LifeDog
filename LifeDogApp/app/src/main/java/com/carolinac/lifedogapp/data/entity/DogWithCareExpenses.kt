@@ -6,10 +6,10 @@ import androidx.room.Relation
 /* Relacion 1 a n */
 data class DogWithCareExpenses(
     @Embedded
-    var dog: Dog,
+    var careExpenses: CareExpenses,
     @Relation(
-        parentColumn = "dog_id",
-        entityColumn = "care_id"
+        parentColumn = "care_id",
+        entityColumn = "dog_id"
     )
-    var careExpenses : List<CareExpenses>
+    var dog: List<Dog>
 )

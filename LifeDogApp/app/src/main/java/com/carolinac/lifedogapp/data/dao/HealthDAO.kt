@@ -14,12 +14,9 @@ interface HealthDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertOrUpdateTerm(term: Term)
 
-    /*
-    * TODO:
-    * Insertar el MedicineCategory
-    * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-    * Buscar la forma de obtener esos datos.
-    * */
+    /* Insertar el MedicineCategory */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateMedicineCategory(medicineCategory: List<MedicineCategory>)
 
     /* Insertar Medicine */
     @Insert(onConflict = OnConflictStrategy.REPLACE)

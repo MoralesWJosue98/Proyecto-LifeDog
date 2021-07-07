@@ -184,4 +184,9 @@
     <string name="inquiries">Inquiries</string>
     <string name="kilos">Kilos</string>
     <string name="cookie">Cookie</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_expenses">Expenses</string>
+    <string name="menu_settings">Settings</string>
 </resources>

@@ -11,11 +11,11 @@ data class Consultation(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "consultation_id")
     var consultationId: Int = 0,
-    @ColumnInfo(name = "dog_id")
-    var dogId: Int,
-    var date: Date,
-    var time: Time,
+    var date: Date?,
+    var time: Time?,
     var place: String,
     var veterinary: String?,
-    var reason: String
+    var reason: String,
+    @ColumnInfo(name = "dog_id")
+    var dogId: Int
 )

@@ -9,7 +9,7 @@ data class Disease(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "disease_id")
     var diseaseId: Int = 0,
+    var disease: String,
     @ColumnInfo(name = "dog_id")
-    var dogId: Int,
-    var disease: String
+    var dogId: Int
 )

@@ -10,8 +10,9 @@ data class Bath(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "bath_id")
     var bathId: Int,
-    @ColumnInfo(name = "dog_id")
-    var date: Date,
+    var date: Date?,
     var repeat: Int,
-    var remember: Boolean
+    var remember: Boolean,
+    @ColumnInfo(name = "dog_id")
+    var dogId: Int
 )

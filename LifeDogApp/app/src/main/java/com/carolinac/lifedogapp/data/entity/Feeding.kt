@@ -13,7 +13,7 @@ data class Feeding(
     var feedingId: Int,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
-    var date: Date,
+    var date: Date?,
     var time: Time,
     var food: String
 )

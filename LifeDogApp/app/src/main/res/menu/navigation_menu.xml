@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/HomeProfilesNavContainer"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/DogProfileNavContainer"
+        android:title="@string/menu_profile"
+        android:icon="@drawable/ic_pawprint"/>
+
+    <item
+        android:id="@+id/calendarFragment"
+        android:title="@string/menu_calendar"
+        android:icon="@drawable/ic_calendar"/>
+
+    <item
+        android:id="@+id/expensesNavContainer"
+        android:title="@string/menu_expenses"
+        android:icon="@drawable/ic_money_bag"/>
+
+    <item
+        android:id="@+id/settingsNavContainer"
+        android:title="@string/menu_settings"
+        android:icon="@drawable/ic_settings"/>
+
+</menu>

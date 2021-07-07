@@ -1,13 +1,15 @@
 package com.carolinac.lifedogapp.data.entity
 
 import androidx.room.Embedded
+import androidx.room.Junction
 import androidx.room.Relation
 
 data class UserWithUserXDog(
-    @Embedded val user: User,
+    @Embedded val dog: Dog,
     @Relation(
-        parentColumn = "user_id",
-        entityColumn = "dog_id"
+        parentColumn = "dog_id",
+        entityColumn = "user_id",
+        associateBy = Junction(UserXDog::class)
     )
-    val userXDog: List<UserXDog>
+    val user: List<User>
 )

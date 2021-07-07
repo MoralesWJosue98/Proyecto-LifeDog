@@ -12,6 +12,6 @@ interface UserDAO {
 
     /* Seleccionar los perros de un usuario */
     @Transaction
-    @Query("SELECT * FROM UserXDog")
-    fun getUserDog() : LiveData<List<UserWithUserXDog>>
+    @Query("SELECT * FROM Dog")
+    fun getUserDog(): LiveData<List<UserWithUserXDog>>
 }

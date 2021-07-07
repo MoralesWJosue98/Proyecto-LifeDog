@@ -1,20 +1,15 @@
 package com.carolinac.lifedogapp.data.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
-import androidx.room.Transaction
+import androidx.room.*
 import com.carolinac.lifedogapp.data.entity.*
 
+@Dao
 interface VaccineDAO {
 
-    /*
-    * TODO:
-    * Insertar el VaccineCategory
-    * Es un dato "quemado", el usuario en ningún momento puede agregarlo
-    * Buscar la forma de obtener esos datos.
-    * */
+    /* Insertar el VaccineCategory */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertOrUpdateVaccineCategory(vaccineCategory: List<VaccineCategory>)
 
     /* Insertar Vaccine Expense */
     @Insert(onConflict = OnConflictStrategy.REPLACE)
@@ -26,7 +21,7 @@ interface VaccineDAO {
 
     /* Seleccionar el listado de tipo de vacunas categoría */
     @Query("SELECT * FROM VaccineCategory")
-    fun getVaccineCategory() : LiveData<List<VaccineCategory>>
+    fun getVaccineCategory(): LiveData<List<VaccineCategory>>
 
     /* Seleccionar el listado de gastos por vacunas */
     @Transaction
