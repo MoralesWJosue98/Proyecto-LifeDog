@@ -5,11 +5,12 @@ import androidx.room.Relation
 
 /* Relacion 1 a n */
 data class DogWithDeworming(
-    @Embedded val dog: Dog,
+    @Embedded
+    val deworming: Deworming,
     @Relation(
         entity = Deworming::class,
         parentColumn = "dog_id",
         entityColumn = "deworming_id"
     )
-    val deworming: List<DewormingAndDewormerType>
+    val dogDewormerType: List<DewormingAndDewormerType>
 )

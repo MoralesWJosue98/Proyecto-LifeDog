@@ -1,9 +1,7 @@
 package com.carolinac.lifedogapp.data
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import com.carolinac.lifedogapp.data.dao.*
 import com.carolinac.lifedogapp.data.entity.*
 
@@ -11,9 +9,11 @@ import com.carolinac.lifedogapp.data.entity.*
     entities = [AccesoriesExpense::class, Allergy::class, Bath::class, CareExpenses::class,
         Consultation::class, DewormerType::class, Deworming::class, Disease::class, Dog::class, Feeding::class,
         FoodCategory::class, FoodExpense::class, Haircut::class, Medication::class, Medicine::class,
-        MedicineCategory::class, MedicineExpense::class, Size::class, Term::class, User::class, UserWithUserXDog::class,
-        UserXDog::class, Vaccine::class, VaccineCategory::class, VaccineExpense::class], version = 1
+        MedicineCategory::class, MedicineExpense::class, Size::class, Term::class, User::class,
+        UserXDog::class, Vaccine::class, VaccineCategory::class, VaccineExpense::class, DogWalk::class],
+    version = 1
 )
+@TypeConverters(Converters::class, PriceConverters::class)
 abstract class LifeDogDatabase : RoomDatabase() {
     abstract fun activityDao(): ActivityDAO
     abstract fun dewormingDao(): DewormingDAO

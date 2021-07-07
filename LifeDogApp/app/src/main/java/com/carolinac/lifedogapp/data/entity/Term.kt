@@ -12,7 +12,7 @@ data class Term(
     var termId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var term: String,
-    var date: Date,
+    var date: Date?,
     var repeat: Int,
     var remember: Boolean
 )

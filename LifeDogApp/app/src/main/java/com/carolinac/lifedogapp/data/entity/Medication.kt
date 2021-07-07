@@ -13,8 +13,8 @@ data class Medication(
     var medicationId: Int = 0,
     @ColumnInfo(name = "dog_id")
     var dogId: Int,
-    var date: Date,
-    var time: Time,
+    var date: Date?,
+    var time: Time?,
     var repeat: Int,
     @ColumnInfo(name = "time_limit")
     var timeLimit: Int?,

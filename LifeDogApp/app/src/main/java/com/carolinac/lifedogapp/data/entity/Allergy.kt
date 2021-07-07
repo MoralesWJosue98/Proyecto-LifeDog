@@ -9,7 +9,7 @@ data class Allergy(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "allergy_id")
     var allergyId: Int = 0,
+    var allergy: String,
     @ColumnInfo(name = "dog_id")
-    var dogId: Int,
-    var allergy: String
+    var dogId: Int
 )

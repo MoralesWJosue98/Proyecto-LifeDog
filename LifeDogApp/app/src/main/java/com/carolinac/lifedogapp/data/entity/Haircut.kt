@@ -10,9 +10,9 @@ data class Haircut(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "haircut_id")
     var HaircutId: Int = 0,
-    @ColumnInfo(name = "dog_id")
-    var dogId: Int,
-    var date: Date,
+    var date: Date?,
     var repeat: Int,
-    var remember: Boolean
+    var remember: Boolean,
+    @ColumnInfo(name = "dog_id")
+    var dogId: Int
 )

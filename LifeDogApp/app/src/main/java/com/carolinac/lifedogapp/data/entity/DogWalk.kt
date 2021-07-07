@@ -11,9 +11,9 @@ data class DogWalk(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "walk_id")
     var walkId: Int,
+    var date: Date?,
+    var time: Time?,
+    var place: String,
     @ColumnInfo(name = "dog_id")
-    var dogId: Int,
-    var date: Date,
-    var time: Time,
-    var place: String
+    var dogId: Int
 )
