@@ -173,4 +173,9 @@
         <item>Internal dewormer</item>
         <item>External dewormer</item>
     </string-array>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_calendar">Calendar</string>
+    <string name="menu_expenses">Expenses</string>
+    <string name="menu_settings">Settings</string>
 </resources>
