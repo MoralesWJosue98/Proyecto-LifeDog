@@ -8,7 +8,7 @@ data class UserXDog(
     @ColumnInfo(name = "user_id")
     val userId: Int,
     @ColumnInfo(name = "dog_id")
-    val dogId: Int,
+    val dogId : Int = 0,
     @ColumnInfo(name = "user_is_editor")
     val userEditor: Boolean
 )

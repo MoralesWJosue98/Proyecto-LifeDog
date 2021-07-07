@@ -86,7 +86,7 @@ class LifeDogRepository(
 
     /* UserDAO */
     suspend fun insertUser(user: User) = userDao.insertOrUpdateUser(user)
-    /*fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()*/
+    fun findAllDogUser(): LiveData<List<UserWithUserXDog>> = userDao.getUserDog()
 
     /* VaccineDAO */
     /*TODO: suspend fun insertVaccineCategory*/

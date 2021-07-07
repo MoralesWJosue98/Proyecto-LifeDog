@@ -59,7 +59,7 @@ interface DogDAO {
     /* Seleccionar los usuarios de un perro
     @Transaction
     @Query("SELECT * FROM UserXDog")
-    fun getDogUser(): LiveData<List<DogWithUserXDog>>*/
+    fun getDogUser(): LiveData<List<DogWithUserXDog>> */
 
     /* Seleccionar el listado de alergias de un perro */
     @Transaction
