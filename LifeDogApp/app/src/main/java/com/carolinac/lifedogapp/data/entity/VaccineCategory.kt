@@ -9,6 +9,6 @@ data class VaccineCategory(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "category_id")
     var categoryId: Int,
-    var category: Int,
+    var category: String,
     var description: String
 )
