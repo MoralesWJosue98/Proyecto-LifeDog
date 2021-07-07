@@ -45,4 +45,9 @@ class DogProfilesFragment : Fragment() {
             navController.navigate(R.id.action_dogProfilesFragment2_to_mainDogProfileFragment)
         }
     }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() : DogDetailsFragment = DogDetailsFragment()
+    }
 }
