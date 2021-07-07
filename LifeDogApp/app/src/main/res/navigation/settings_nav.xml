@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_nav"
+    app:startDestination="@id/settingFragment">
+
+    <action
+        android:id="@+id/action_settingFragment_to_termsOfUse"
+        app:destination="@id/termsOfUse" />
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="com.carolinac.lifedogapp.ui.DeleteAccountFragment"
+        tools:layout="@layout/fragment_delete_account"
+        android:label="fragment_delete_account" />
+    <action
+        android:id="@+id/action_settingFragment_to_privacyPolicy2"
+        app:destination="@id/privacyPolicy2" />
+    <action
+        android:id="@+id/action_settingFragment_to_deleteAccountFragment"
+        app:destination="@id/deleteAccountFragment" />
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.carolinac.lifedogapp.ui.changePasswordFragment"
+        tools:layout="@layout/fragment_change_password"
+        android:label="fragment_change_password" />
+    <fragment
+        android:id="@+id/privacyPolicy2"
+        android:name="com.carolinac.lifedogapp.ui.PrivacyPolicy"
+        tools:layout="@layout/fragment_privacy_policy"
+        android:label="fragment_privacy_policy" />
+    <fragment
+        android:id="@+id/termsOfUse"
+        android:name="com.carolinac.lifedogapp.ui.TermsOfUse"
+        tools:layout="@layout/fragment_terms_of_use"
+        android:label="fragment_terms_of_use" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.carolinac.lifedogapp.ui.SettingFragment"
+        tools:layout="@layout/fragment_setting"
+        android:label="fragment_setting">
+        <action
+            android:id="@+id/action_settingFragment_to_privacyPolicy2"
+            app:destination="@id/privacyPolicy2" />
+        <action
+            android:id="@+id/action_settingFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_deleteAccountFragment"
+            app:destination="@id/deleteAccountFragment" />
+        <action
+            android:id="@+id/action_settingFragment_to_termsOfUse"
+            app:destination="@id/termsOfUse" />
+    </fragment>
+    <action
+        android:id="@+id/action_settingFragment_to_changePasswordFragment"
+        app:destination="@id/changePasswordFragment" />
+</navigation>

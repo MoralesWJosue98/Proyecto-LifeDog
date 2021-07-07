@@ -78,4 +78,8 @@ class ExpensesFragment : Fragment() {
         }
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() : ExpensesFragment = ExpensesFragment()
+    }
 }

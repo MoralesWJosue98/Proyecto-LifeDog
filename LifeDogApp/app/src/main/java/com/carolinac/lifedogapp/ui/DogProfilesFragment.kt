@@ -42,7 +42,12 @@ class DogProfilesFragment : Fragment() {
             navController.navigate(R.id.action_dogProfilesFragment2_to_addDogFormFragment)
         }
         auxButton.setOnClickListener {
-            navController.navigate(R.id.action_dogProfilesFragment2_to_mainDogProfileFragment)
+            navController.navigate(R.id.action_dogProfilesFragment_to_dogProfileNavContainer)
         }
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() : DogDetailsFragment = DogDetailsFragment()
     }
 }
