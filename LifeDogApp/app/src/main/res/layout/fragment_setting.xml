@@ -6,6 +6,7 @@
     tools:context=".ui.SettingFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/xxl_gap"
     android:fillViewport="true"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="0dp">

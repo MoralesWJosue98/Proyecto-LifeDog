@@ -1,34 +1,24 @@
 package com.carolinac.lifedogapp.ui
 
+import android.media.Image
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.Spinner
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import com.carolinac.lifedogapp.R
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [SettingFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class SettingFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var navController: NavController
+    private lateinit var btnChangePassword: ImageButton
+    private lateinit var btnDelete: ImageButton
+    private lateinit var btnUso: ImageButton
+    private lateinit var btnPrivacy: ImageButton
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,23 +28,34 @@ class SettingFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_setting, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SettingFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SettingFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        navController = view.findNavController()
+        bind(view)
+
+        setListeners()
+    }
+
+    private fun bind(view: View) {
+        btnChangePassword = view.findViewById(R.id.btn_cambioContra)
+        btnDelete = view.findViewById(R.id.btn_eliminar)
+        btnUso = view.findViewById(R.id.btn_uso)
+        btnPrivacy = view.findViewById(R.id.btn_privacidad)
+    }
+
+    private fun setListeners() {
+        btnChangePassword.setOnClickListener {
+            navController.navigate(R.id.action_settingFragment_to_changePasswordFragment)
+        }
+        btnDelete.setOnClickListener {
+            navController.navigate(R.id.action_settingFragment_to_deleteAccountFragment)
+        }
+        btnUso.setOnClickListener {
+            navController.navigate(R.id.action_settingFragment_to_termsOfUse)
+        }
+        btnPrivacy.setOnClickListener {
+            navController.navigate(R.id.action_settingFragment_to_privacyPolicy2)
+        }
     }
 }
