@@ -36,7 +36,7 @@
         android:label="fragment_terms_of_use" />
     <fragment
         android:id="@+id/settingFragment"
-        android:name="com.carolinac.lifedogapp.ui.SettingFragment"
+        android:name="com.carolinac.lifedogapp.ui.settings.SettingFragment"
         tools:layout="@layout/fragment_setting"
         android:label="fragment_setting">
         <action

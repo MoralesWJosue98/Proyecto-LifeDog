@@ -100,5 +100,8 @@ class LifeDogRepository(
         vaccineDao.getDogWithVaccineExpense()
 
     fun findAllDogVaccine(): LiveData<List<DogWithVaccine>> = vaccineDao.getDogWithVaccine()
+    fun getLoggedUser() = userDao.getLoggedUser()
+    fun randomAdvice(randomAdviceId: Int) = dogDao.getRandomAdvice(randomAdviceId)
+    suspend fun logOut(user: User) = userDao.logOut(user)
 
 }
