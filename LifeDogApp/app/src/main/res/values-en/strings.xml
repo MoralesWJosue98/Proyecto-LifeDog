@@ -173,6 +173,17 @@
         <item>Internal dewormer</item>
         <item>External dewormer</item>
     </string-array>
+    <string name="reinforcement">Reinforcement</string>
+    <string name="title_add">Add</string>
+    <string name="quantities">Quantities</string>
+    <string name="title_next_meals">Next Meals</string>
+    <string name="Terms_of_use">Terms of use</string>
+    <string name="System_theme">System theme</string>
+    <string name="food">Food</string>
+    <string name="toilets">Toilets</string>
+    <string name="inquiries">Inquiries</string>
+    <string name="kilos">Kilos</string>
+    <string name="cookie">Cookie</string>
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_calendar">Calendar</string>
@@ -181,4 +192,9 @@
     <string name="privacy">Life Dog understands too much how important privacy is for our customers, and we also want them to feel safe using our app, for this, we want to make sure that you can understand how we collect and We use your personal information on each mobile device and its services available within our Life Dog application. \\ n \\ nPURPOSE OF PERSONAL DATA PROCESSING \\ n \\ nIn LIFE DOG app, we make sure that the application runs in the best way, for them it is to collect the personal information that you need directly and information from third parties. Bliss information is used to provide a better and personalized experience. We also use personal information to provide tailored advice for your little furry friend. The collection, storage, modification, structuring and, where appropriate, elimination, of the Data provided by Users will constitute treatment operations carried out by the Responsible, in order to guarantee the correct functioning of the Application, maintain the relationship of provision of services with the User, and for the management, administration, information, provision and improvement of the service.</string>
     <string name="slogan">The best care for your best friend!</string>
     <string name="terms">These Terms and Conditions of Use regulate the rules to which the use of the Dog Life application. The application download attributes the condition of User to whom it is done and implies acceptance of all the conditions included in this document and in the Privacy Policy. \\ n \\ Regarding anonymous statistics, the Dog Life application reserves the right to perform a monitoring your activity in the app and reporting it to third-party statistical services, to have a better experience and a better functioning of the mobile application, as these data are required in order to provide certain advice specifications from your canine friend. \\ n \\ Regarding anonymous statistics, the Dog Life application reserves the right to perform a monitoring your activity in the app and reporting it to third-party statistical services, to have a better experience and a better functioning of the mobile application, as these data are required in order to provide certain advice specifications from your canine friend.</string>
+    <string name="hint_size">Small</string>
+    <string name="black">Black</string>
+    <string name="create_dog">Create dog</string>
+    <string name="hint_rage">Rage</string>
+    <string name="hint_flowers">Flowers</string>
 </resources>

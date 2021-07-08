@@ -134,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="100dp" />
+        app:layout_constraintGuide_percent="0.24817519" />
 
     <EditText
         android:id="@+id/tvRepetitionHaircut"
