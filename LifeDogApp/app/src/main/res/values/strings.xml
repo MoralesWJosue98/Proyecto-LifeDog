@@ -195,4 +195,9 @@
     <string name="menu_calendar">Calendario</string>
     <string name="menu_expenses">Gastos</string>
     <string name="menu_settings">Configuración</string>
+    <string name="hint_size">Pequeño</string>
+    <string name="black">Negro</string>
+    <string name="create_dog">Crear perrito</string>
+    <string name="hint_rage">Rabia</string>
+    <string name="hint_flowers">Flores</string>
 </resources>

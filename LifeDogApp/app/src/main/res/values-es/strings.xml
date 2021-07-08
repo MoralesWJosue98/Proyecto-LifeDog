@@ -185,4 +185,9 @@
     <string name="inquiries">Consultas</string>
     <string name="kilos">Kilos</string>
     <string name="cookie">Galleta</string>
+    <string name="hint_size">Pequeño</string>
+    <string name="black">Negro</string>
+    <string name="create_dog">Crear perrito</string>
+    <string name="hint_rage">Rabia</string>
+    <string name="hint_flowers">Flores</string>
 </resources>
