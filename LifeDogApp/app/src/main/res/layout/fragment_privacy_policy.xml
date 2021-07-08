@@ -85,13 +85,7 @@
             android:layout_marginTop="@dimen/default_gap"
             android:layout_marginEnd="@dimen/small_gap"
             android:layout_marginBottom="@dimen/default_gap"
-            android:text="Life Dog entiende demasiado la importante que es la privacidad
-para nuestros clientes, y tambien queremos que se sientan seguros de usar nuestra app, para ello, queremos asegurarnos de que pueda comprender como recopilamos y
-usamos su informacion personal  en cada dispositivo móvil y sus servicios disponibles dentro de nuestra aplicacion Life Dog.\n\nFINALIDAD DE TRATAMIENTOS DE DATOS PERSONALES\n\nEn LIFE DOG app, nos aseguramos que la aplicación corra de la mejor manera, para ellos es necesario recopilar la información personal que proporciona directamente e información de terceros. Dicha
-información se utiliza para poder brindar una mejor y personalizada experiencia. También usamos información personal para brindar consejos adaptados para su pequeño amigo peludo. La recogida, almacenamiento, modificación, estructuración y en su caso, eliminación, de los
-datos proporcionados por los Usuarios, constituirán operaciones de tratamiento llevadas a cabo
-por el Responsable, con la finalidad de garantizar el correcto funcionamiento de la Aplicación, mantener la relación de prestación de servicios con el Usuario, y para la gestión, administración,
-información, prestación y mejora del servicio."
+            android:text="@string/privacy"
             android:textAlignment="inherit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"

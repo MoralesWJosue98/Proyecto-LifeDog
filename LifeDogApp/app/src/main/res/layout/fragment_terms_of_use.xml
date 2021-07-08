@@ -81,18 +81,7 @@
             android:layout_marginTop="@dimen/default_gap"
             android:layout_marginEnd="@dimen/small_gap"
             android:layout_marginBottom="@dimen/default_gap"
-            android:text="Estos Términos y Condiciones de Uso regulan las reglas a que se sujeta la
-utilización de la aplicación Dog Life. La descarga de la aplicación atribuye la condición de
-Usuario a quien lo haga e implica la aceptación de todas las condicione incluidas en este documento
-y en la Política de Privacidad.\n\
-En cuanto a las estadisticas anónimas, la aplicación Dog Life se reserva el derecho a realizar un
-seguimiento de tu actividad en la app y a informar de ello a los servicios estadísticos de terceros,
-para tener una mejor experiencia y un mejor funcionamiento de la aplicación móvil, pues estos datos
-se requieren para poder brindar ciertas especificaciones de consejos de tu amigo canino.\n\
-En cuanto a las estadisticas anónimas, la aplicación Dog Life se reserva el derecho a realizar un
-seguimiento de tu actividad en la app y a informar de ello a los servicios estadísticos de terceros,
-para tener una mejor experiencia y un mejor funcionamiento de la aplicación móvil, pues estos datos
-se requieren para poder brindar ciertas especificaciones de consejos de tu amigo canino."
+            android:text=""
             android:textAlignment="inherit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
