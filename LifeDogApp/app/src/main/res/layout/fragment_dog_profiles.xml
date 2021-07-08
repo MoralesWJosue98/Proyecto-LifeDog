@@ -4,7 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/xxl_gap"
+    android:layout_marginLeft="@dimen/default_gap"
+    android:layout_marginTop="@dimen/default_gap"
+    android:layout_marginRight="@dimen/default_gap"
     tools:context="ui.DogProfilesFragment">
+
+    <LinearLayout
+        android:id="@+id/idProfileCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_gap"
+        android:layout_marginStart="@dimen/medium_gap"
+        android:layout_marginTop="@dimen/large_gap"
+        android:layout_marginRight="@dimen/medium_gap"
+        android:background="@drawable/baths_gradient_background"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/baths_gradient_background">
+
+            <ImageView
+                android:id="@+id/imageView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_gap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_dog_walk_colored" />
+
+            <TextView
+                android:id="@+id/tvDogName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/small_font"
+                android:text="Dogguie"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView29"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDogAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/medium_gap"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/imageView29"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogBreed" />
+
+            <TextView
+                android:id="@+id/tvDogBreed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/extra_small_gap"
+                android:text="Mezclado"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_font"
+                app:layout_constraintStart_toStartOf="@+id/tvDogName"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogName" />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/small_font"
+                android:text="@string/year"
+                android:textColor="@color/white"
+                android:textSize="@dimen/extra_small_font"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvDogAge"
+                app:layout_constraintStart_toStartOf="@+id/tvDogAge"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogAge" />
+
+            <TextView
+                android:id="@+id/tvDogWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="20"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ivDogGender"
+                app:layout_constraintStart_toEndOf="@+id/tvDogAge"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogBreed" />
+
+            <TextView
+                android:id="@+id/textView69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kilograms"
+                android:textColor="@color/white"
+                android:textSize="@dimen/extra_small_font"
+                app:layout_constraintEnd_toEndOf="@+id/tvDogWeight"
+                app:layout_constraintStart_toStartOf="@+id/tvDogWeight"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogWeight" />
+
+            <TextView
+                android:id="@+id/textView72"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male_dog"
+                android:textColor="@color/white"
+                android:textSize="@dimen/extra_small_font"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView69"
+                app:layout_constraintEnd_toEndOf="@+id/ivDogGender"
+                app:layout_constraintStart_toStartOf="@+id/ivDogGender" />
+
+            <ImageView
+                android:id="@+id/ivDogGender"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogBreed"
+                app:srcCompat="@drawable/ic_male_gender" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <!--
     <androidx.recyclerview.widget.RecyclerView
@@ -33,17 +166,6 @@
         android:src="@drawable/ic_add_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Para mientras"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -97,7 +97,7 @@
                 <ImageView
                     android:id="@+id/imageView5"
                     android:layout_width="0dp"
-                    android:layout_height="140dp"
+                    android:layout_height="175dp"
                     android:layout_marginStart="@dimen/medium_gap"
                     android:layout_marginTop="@dimen/medium_gap"
                     android:layout_marginEnd="@dimen/medium_gap"

@@ -18,14 +18,13 @@
                 android:id="@+id/ivDetailsDogPhoto"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
+                android:src="@drawable/ic_dogs"
                 android:scaleType="centerCrop"
-                android:src="@color/lime_green"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_percent="0.25"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:src="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvDetailsDogName"
@@ -33,11 +32,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/default_gap"
-                app:drawableStartCompat="@drawable/ic_pawprint_filled"
                 android:drawablePadding="@dimen/input_padding"
-                android:text="@string/short_lorem"
-                android:textColor="?attr/colorOnBackground"
+                android:text="Dogguie"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?attr/colorOnBackground"
+                app:drawableStartCompat="@drawable/ic_pawprint_filled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ivDetailsDogPhoto" />
 
@@ -97,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
-                android:text="@string/short_lorem"
+                android:text="2"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -107,7 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:text="@string/short_lorem"
+                android:text="6/06/2019"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsDogAge"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -132,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
-                android:text="@string/short_lorem"
+                android:text="Café y negro"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView22" />
@@ -155,8 +154,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
+                android:text="Mediano"
                 android:textColor="?attr/colorOnBackground"
-                android:text="@string/short_lorem"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -200,7 +199,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
-                android:text="@string/short_lorem"
+                android:text="Macho"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView26" />
@@ -210,7 +209,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_gap"
-                android:text="@string/short_lorem"
+                android:text="Mezclado"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -248,7 +247,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/medium_gap"
                 android:layout_marginTop="@dimen/small_gap"
-                android:text="@string/short_lorem"
+                android:text="20kg"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView31" />
@@ -257,7 +256,7 @@
                 android:id="@+id/tvSterilized"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/short_lorem"
+                android:text="Sí"
                 android:textColor="?attr/colorOnBackground"
                 app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsWeight"
                 app:layout_constraintStart_toStartOf="@+id/guideline3" />
