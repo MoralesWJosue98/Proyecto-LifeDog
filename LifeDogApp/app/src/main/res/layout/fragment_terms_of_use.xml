@@ -81,7 +81,7 @@
             android:layout_marginTop="@dimen/default_gap"
             android:layout_marginEnd="@dimen/small_gap"
             android:layout_marginBottom="@dimen/default_gap"
-            android:text=""
+            android:text="@string/terms"
             android:textAlignment="inherit"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
