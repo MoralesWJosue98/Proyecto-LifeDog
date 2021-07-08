@@ -8,9 +8,10 @@ import androidx.room.PrimaryKey
 data class User(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "user_id")
-    var userId: Int,
-    var username: String,
+    var userId: Int = 0,
+    var username: String = "",
     var password: String,
-    var code: Int,
-    var email: String
+    var code: Int? = null,
+    var email: String,
+    var logged: Boolean = false
 )

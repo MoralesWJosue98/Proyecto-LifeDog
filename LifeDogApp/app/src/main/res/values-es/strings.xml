@@ -193,4 +193,9 @@
     <string name="create_dog">Crear perrito</string>
     <string name="hint_rage">Rabia</string>
     <string name="hint_flowers">Flores</string>
+    <string name="emptyfields">Los campos deben ser completados</string>
+    <string name="login_error">Error al iniciar sesión</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="connection_error">Error de conexión</string>
+    <string name="succesfullyLogOut">Se ha cerrado sesión con éxito</string>
 </resources>

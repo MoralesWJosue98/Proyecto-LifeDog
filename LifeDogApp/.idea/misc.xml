@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+=======
   <component name="ProjectPlainTextFileTypeManager">
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/carolinac/lifedogapp/homeProfilesNav.kt" />
   </component>
+>>>>>>> 10060840b850592fd96a0772300f3af7905126b4
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

@@ -1,484 +1,490 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/pale_gray"
-    tools:context=".ui.SettingFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="@dimen/xxl_gap"
-    android:fillViewport="true"
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="0dp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.carolinac.lifedogapp.ui.settings.SettingsViewModel" />
+    </data>
+    <ScrollView
+        android:background="@color/pale_gray"
+        tools:context=".ui.settings.SettingFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <TextView
-            android:id="@+id/tvDogNameSettings"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:drawableEnd="@drawable/ic_edit"
-            android:drawableTint="@color/aqua_200"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="Neymar"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/aqua_200"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/correo_settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="centro.profesinal@uca.edu.sv"
-            android:textColor="@color/aqua_200"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvDogNameSettings"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tvDogNameSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="@{viewmodel.username}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/aqua_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="@string/appearance"
-            android:textColor="@color/aqua_200"
-            android:textStyle="bold"
-            app:drawableStartCompat="@drawable/ic_appearance"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.125"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/correo_settings"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/correo_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.email}"
+                android:textColor="@color/aqua_200"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDogNameSettings"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="@dimen/default_gap"
-            android:text="@string/system_theme"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView21"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="Apariencia"
+                android:textColor="@color/aqua_200"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.125"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/correo_settings"
+                tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/sw_Sistema"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:outlineAmbientShadowColor="@color/dark_blue"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="Tema Sistema"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView21"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/default_setting"
-            android:layout_marginTop="12dp"
-            android:text="@string/dark_theme"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintEnd_toStartOf="@+id/switch_oscuro"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView20"
-            tools:ignore="MissingConstraints"
-            tools:layout_marginTop="@dimen/default_gap" />
+            <Switch
+                android:id="@+id/sw_Sistema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:outlineAmbientShadowColor="@color/dark_blue"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <Switch
-            android:id="@+id/switch_oscuro"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_setting"
+                android:layout_marginTop="12dp"
+                android:text="Tema Oscuro"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintEnd_toStartOf="@+id/switch_oscuro"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView20"
+                tools:ignore="MissingConstraints"
+                tools:layout_marginTop="@dimen/default_gap" />
 
-        <TextView
-            android:id="@+id/textViewIdioma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="@string/language"
-            android:textColor="@color/aqua_200"
-            android:textStyle="bold"
-            app:drawableStartCompat="@drawable/ic_language"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView23"
-            tools:ignore="MissingConstraints" />
+            <Switch
+                android:id="@+id/switch_oscuro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="48dp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView23"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="@dimen/default_gap"
-            android:text="Español"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewIdioma"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textViewIdioma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="Idioma"
+                android:textColor="@color/aqua_200"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_language"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView23"
+                tools:ignore="MissingConstraints" />
 
-        <RadioButton
-            android:id="@+id/radioButton_espanol"
-            android:layout_width="35dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="@dimen/radiobtn_setting"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView25"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="@dimen/default_gap"
+                android:text="Español"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIdioma"
+                tools:ignore="MissingConstraints" />
 
-
-        <TextView
-            android:id="@+id/textView26"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="20dp"
-            android:text="Ingles"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView25"
-            tools:ignore="MissingConstraints" />
-
-        <RadioButton
-            android:id="@+id/radioButton_ingles"
-            android:layout_width="35dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="@dimen/radiobtn_setting"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints" />
+            <RadioButton
+                android:id="@+id/radioButton_espanol"
+                android:layout_width="35dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/radiobtn_setting"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView25"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
 
 
-        <TextView
-            android:id="@+id/textViewRecordatorio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="@string/reminders"
-            android:textColor="@color/aqua_200"
-            android:textStyle="bold"
-            app:drawableStartCompat="@drawable/ic_information"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView26"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="20dp"
+                android:text="Ingles"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView25"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView27"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/dark_blue"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/food"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewRecordatorio"
-            tools:ignore="MissingConstraints" />
-
-        <Switch
-            android:id="@+id/switch_alimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView27"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <RadioButton
+                android:id="@+id/radioButton_ingles"
+                android:layout_width="35dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="@dimen/radiobtn_setting"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
 
 
-        <TextView
-            android:id="@+id/textView28"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/toilets"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView27"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textViewRecordatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="Recordatorio"
+                android:textColor="@color/aqua_200"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView26"
+                tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch_baños"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_blue"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Alimento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRecordatorio"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/inquiries"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView28"
-            tools:ignore="MissingConstraints" />
-
-        <Switch
-            android:id="@+id/switch_consultas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView29"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
-
-        <TextView
-            android:id="@+id/textView30"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/haircut"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29"
-            tools:ignore="MissingConstraints" />
-
-        <Switch
-            android:id="@+id/switch_corte"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView30"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <Switch
+                android:id="@+id/switch_alimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView27"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
 
-        <TextView
-            android:id="@+id/textView31"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:textColor="@color/dark_blue"
-            android:text="@string/deworming"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView30"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Baños"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27"
+                tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch_desparasitacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <Switch
+                android:id="@+id/switch_baños"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <TextView
-            android:id="@+id/textView32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/medicines"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView31"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Consultas"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView28"
+                tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch_medicamentos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView32"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <Switch
+                android:id="@+id/switch_consultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView29"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/walks"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView32"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Corte de pelo"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView29"
+                tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch_paseos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView33"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
-
-        <TextView
-            android:id="@+id/textView34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/vaccines"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView33"
-            tools:ignore="MissingConstraints" />
-
-        <Switch
-            android:id="@+id/switch_vacunacion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/settings_switch"
-            app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+            <Switch
+                android:id="@+id/switch_corte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView30"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
 
-        <TextView
-            android:id="@+id/textViewSeguridad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="Seguridad"
-            android:textColor="@color/aqua_200"
-            android:textStyle="bold"
-            app:drawableStartCompat="@drawable/ic_security"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView34"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/dark_blue"
+                android:text="Desparasitación"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView30"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/change_password"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSeguridad"
-            tools:ignore="MissingConstraints" />
+            <Switch
+                android:id="@+id/switch_desparasitacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <ImageButton
-            android:id="@+id/btn_cambioContra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/ic_left_arrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.762"
-            app:layout_constraintStart_toEndOf="@+id/textView35"
-            app:layout_constraintTop_toBottomOf="@+id/switch_vacunacion"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Medicamentos"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView31"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/delete_account"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView35"
-            tools:ignore="MissingConstraints" />
+            <Switch
+                android:id="@+id/switch_medicamentos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView32"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
+            <TextView
+                android:id="@+id/textView33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Paseos"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView32"
+                tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/btn_eliminar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/ic_left_arrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.832"
-            app:layout_constraintStart_toEndOf="@+id/textView36"
-            app:layout_constraintTop_toBottomOf="@+id/btn_cambioContra"
-            tools:ignore="MissingConstraints" />
+            <Switch
+                android:id="@+id/switch_paseos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView33"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-        <TextView
-            android:id="@+id/textViewAcerca"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="12dp"
-            android:drawablePadding="@dimen/input_padding"
-            android:text="@string/about"
-            android:textColor="@color/aqua_200"
-            android:textStyle="bold"
-            app:drawableStartCompat="@drawable/ic_information"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView36"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Vacunación"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView33"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView37"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/terms_of_use"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewAcerca"
-            tools:ignore="MissingConstraints" />
+            <Switch
+                android:id="@+id/switch_vacunacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/settings_switch"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView34"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
 
-        <ImageButton
-            android:id="@+id/btn_uso"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/ic_left_arrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.824"
-            app:layout_constraintStart_toEndOf="@+id/textView37"
-            app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textViewSeguridad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="Seguridad"
+                android:textColor="@color/aqua_200"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_security"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView34"
+                tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView38"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/default_setting"
-            android:layout_marginTop="16dp"
-            android:text="@string/privacy_policy"
-            android:textColor="@color/dark_blue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView37"
-            tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text=" Cerrar sesión                  "
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSeguridad"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/btnLogOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_left_arrow"
+                android:onClick="@{()->viewmodel.logOut()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.762"
+                app:layout_constraintStart_toEndOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/switch_vacunacion"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Eliminar cuenta"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView35"
+                tools:ignore="MissingConstraints" />
 
 
-        <ImageButton
-            android:id="@+id/btn_privacidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/ic_left_arrow"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.794"
-            app:layout_constraintStart_toEndOf="@+id/textView38"
-            app:layout_constraintTop_toBottomOf="@+id/btn_uso"
-            tools:ignore="MissingConstraints" />
+            <ImageButton
+                android:id="@+id/btn_eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.832"
+                app:layout_constraintStart_toEndOf="@+id/textView36"
+                app:layout_constraintTop_toBottomOf="@+id/btnLogOut"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewAcerca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="@dimen/input_padding"
+                android:text="Acerca de"
+                android:textColor="@color/aqua_200"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_information"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Términos de uso"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAcerca"
+                tools:ignore="MissingConstraints" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+            <ImageButton
+                android:id="@+id/btn_uso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.824"
+                app:layout_constraintStart_toEndOf="@+id/textView37"
+                app:layout_constraintTop_toBottomOf="@+id/btn_eliminar"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_setting"
+                android:layout_marginTop="16dp"
+                android:text="Política de privacidad"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView37"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageButton
+                android:id="@+id/btn_privacidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_left_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.794"
+                app:layout_constraintStart_toEndOf="@+id/textView38"
+                app:layout_constraintTop_toBottomOf="@+id/btn_uso"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

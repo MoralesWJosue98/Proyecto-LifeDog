@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_sign_up_form" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.carolinac.lifedogapp.ui.LoginFragment"
+        android:name="com.carolinac.lifedogapp.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -45,12 +45,15 @@
     </fragment>
     <fragment
         android:id="@+id/initialFragment"
-        android:name="com.carolinac.lifedogapp.ui.InitialFragment"
+        android:name="com.carolinac.lifedogapp.ui.initial.InitialFragment"
         android:label="fragment_initial"
         tools:layout="@layout/fragment_initial" >
         <action
             android:id="@+id/action_initialFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_initialFragment_to_homeProfilesNavContainer"
+            app:destination="@id/homeProfilesNavContainer" />
     </fragment>
     <fragment
         android:id="@+id/homeProfilesNavContainer"

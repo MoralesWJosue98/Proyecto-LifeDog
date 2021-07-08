@@ -33,7 +33,10 @@ abstract class LifeDogDatabase : RoomDatabase() {
 
         fun getDatabase(context: Context): LifeDogDatabase {
             return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
+                val instance = buildDatabase(context)
+                INSTANCE = instance
+                instance
+
             }
         }
 
@@ -48,6 +51,8 @@ abstract class LifeDogDatabase : RoomDatabase() {
                         super.onCreate(db)
                         // insert the data on the IO Thread
                         ioThread {
+                            getDatabase(context).dewormingDao()
+                                .insertOrUpdateDewormerType(PREPOPULATE_DATA)
                             /* DewormerType */
                             getDatabase(context).dewormingDao()
                                 .insertOrUpdateDewormerType(PREPOPULATE_DEWTYPE)
@@ -80,6 +85,10 @@ abstract class LifeDogDatabase : RoomDatabase() {
                     }
                 })
                 .build()
+
+        val PREPOPULATE_DATA = listOf(
+            DewormerType(1, "Sentry HC WormX Plus "),
+            DewormerType(2, " Beaphar"), DewormerType(3, "Triple Wormer Broad Spectrum"))
 
         val PREPOPULATE_DEWTYPE = listOf(
             DewormerType(1, "Sentry HC WormX Plus "),

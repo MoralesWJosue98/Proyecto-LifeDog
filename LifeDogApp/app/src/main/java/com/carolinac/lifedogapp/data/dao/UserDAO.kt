@@ -14,4 +14,11 @@ interface UserDAO {
     @Transaction
     @Query("SELECT * FROM Dog")
     fun getUserDog(): LiveData<List<UserWithUserXDog>>
+
+    @Query("SELECT * FROM User WHERE logged = 1")
+    fun getLoggedUser(): LiveData<User?>
+
+    @Update
+    suspend fun logOut(user : User)
+
 }
