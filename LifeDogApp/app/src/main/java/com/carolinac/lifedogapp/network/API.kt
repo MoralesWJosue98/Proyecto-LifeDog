@@ -4,7 +4,6 @@ import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-
 private const val BASE_URL = "https://life-dog.herokuapp.com/"
 
 var gson = GsonBuilder()
