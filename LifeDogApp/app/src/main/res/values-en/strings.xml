@@ -173,9 +173,25 @@
         <item>Internal dewormer</item>
         <item>External dewormer</item>
     </string-array>
+    <string name="reinforcement">Reinforcement</string>
+    <string name="title_add">Add</string>
+    <string name="quantities">Quantities</string>
+    <string name="title_next_meals">Next Meals</string>
+    <string name="Terms_of_use">Terms of use</string>
+    <string name="System_theme">System theme</string>
+    <string name="food">Food</string>
+    <string name="toilets">Toilets</string>
+    <string name="inquiries">Inquiries</string>
+    <string name="kilos">Kilos</string>
+    <string name="cookie">Cookie</string>
     <string name="menu_home">Home</string>
     <string name="menu_profile">Profile</string>
     <string name="menu_calendar">Calendar</string>
     <string name="menu_expenses">Expenses</string>
     <string name="menu_settings">Settings</string>
+    <string name="hint_size">Small</string>
+    <string name="black">Black</string>
+    <string name="create_dog">Create dog</string>
+    <string name="hint_rage">Rage</string>
+    <string name="hint_flowers">Flowers</string>
 </resources>

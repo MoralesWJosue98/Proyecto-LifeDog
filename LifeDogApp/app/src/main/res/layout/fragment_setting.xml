@@ -8,7 +8,6 @@
             name="viewmodel"
             type="com.carolinac.lifedogapp.ui.settings.SettingsViewModel" />
     </data>
-
     <ScrollView
         android:background="@color/pale_gray"
         tools:context=".ui.settings.SettingFragment"

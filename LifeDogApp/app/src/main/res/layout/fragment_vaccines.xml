@@ -20,13 +20,15 @@
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="Refuerzo"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="@dimen/medium_gap"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:text="@string/reinforcement"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000133"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.085"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
@@ -40,7 +42,7 @@
             android:layout_marginEnd="@dimen/medium_gap"
             android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
@@ -49,12 +51,10 @@
             android:id="@+id/textView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="@dimen/medium_gap"
             android:layout_marginTop="8dp"
-            android:text="Fecha "
+            android:text="@string/date"
             android:textColor="@color/dark_blue"
-            app:layout_constraintEnd_toStartOf="@+id/textView34"
-            app:layout_constraintHorizontal_bias="0.004"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
@@ -62,33 +62,34 @@
             android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@android:dimen/thumbnail_width"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="96dp"
-            android:text="Hora"
+            android:layout_marginEnd="84dp"
+            android:text="@string/hour"
             android:textColor="@color/dark_blue"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/divider6"
+            app:layout_constraintStart_toEndOf="@+id/textView33"
             app:layout_constraintTop_toBottomOf="@+id/divider6" />
 
         <EditText
             android:id="@+id/dateRefuerzo"
             android:layout_width="223dp"
             android:layout_height="42dp"
+            android:layout_marginStart="@dimen/medium_gap"
             android:layout_marginTop="12dp"
             android:background="@drawable/custom_input_anadir"
             android:clickable="true"
-            android:drawableStart="@drawable/ic_calendar"
 
+            android:drawableStart="@drawable/ic_calendar"
             android:drawablePadding="@dimen/input_padding"
             android:elevation="@dimen/default_shadow"
-            android:ems="10"
 
+            android:ems="10"
             android:inputType="date"
             android:maxLines="1"
             android:padding="@dimen/input_padding"
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.154"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView33"
             tools:ignore="MissingConstraints" />
@@ -98,7 +99,8 @@
             android:id="@+id/horaRefuerzo"
             android:layout_width="108dp"
             android:layout_height="42dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/input_padding"
+            android:layout_marginEnd="@dimen/medium_gap"
             android:background="@drawable/custom_input_anadir"
             android:drawableStart="@drawable/ic_clock"
             android:drawablePadding="10dp"
@@ -111,21 +113,22 @@
             android:textColorHint="@color/gray"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
-            app:layout_constraintStart_toEndOf="@+id/dateRefuerzo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView34"
             app:layout_constraintTop_toBottomOf="@+id/textView34"
             tools:ignore="MissingConstraints" />
-
 
         <TextView
             android:id="@+id/textView44"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Clínica"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:text="@string/vet_clinic"
             android:textColor="@color/dark_blue"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.113"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dateRefuerzo"
             tools:ignore="MissingConstraints" />
@@ -134,13 +137,14 @@
             android:id="@+id/lugar_refuerzo"
             android:layout_width="349dp"
             android:layout_height="48dp"
+            android:layout_marginStart="@dimen/medium_gap"
             android:layout_marginTop="8dp"
-            android:background="@drawable/custom_input_anadir"
 
+            android:background="@drawable/custom_input_anadir"
             android:clickable="true"
+
             android:drawableStart="@drawable/ic_place"
             android:drawablePadding="@dimen/input_padding"
-
             android:elevation="@dimen/default_shadow"
             android:ems="10"
             android:inputType="date"
@@ -148,36 +152,35 @@
             android:padding="@dimen/input_padding"
             android:textColor="@color/black"
             android:textColorHint="@color/gray"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.532"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView44"
             tools:ignore="MissingConstraints" />
+
 
         <CheckBox
             android:id="@+id/checkBox_refuerzo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Recordar el día anterior"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/day_before_reminder"
             android:textColor="@color/dark_blue"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.896"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/lugar_refuerzo"
             app:layout_constraintTop_toBottomOf="@+id/lugar_refuerzo" />
-
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Historial"
+            android:layout_marginStart="@dimen/medium_gap"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/medium_gap"
+            android:text="@string/title_history"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="#000133"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/checkBox_refuerzo"
             tools:ignore="MissingConstraints" />
@@ -191,7 +194,7 @@
             android:layout_marginEnd="@dimen/medium_gap"
             android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
