@@ -7,13 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.LinearLayout
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.carolinac.lifedogapp.R
 
 class DogProfilesFragment : Fragment() {
     private lateinit var addDogButton: ImageButton
-    private lateinit var auxButton: Button
+    private lateinit var profileCard: LinearLayout
     private lateinit var navController: NavController
 
     override fun onCreateView(
@@ -34,14 +35,14 @@ class DogProfilesFragment : Fragment() {
 
     private fun bind(view: View) {
         addDogButton = view.findViewById(R.id.addDogButton)
-        auxButton = view.findViewById(R.id.button2)
+        profileCard= view.findViewById(R.id.idProfileCard)
     }
 
     private fun setListeners() {
         addDogButton.setOnClickListener {
             navController.navigate(R.id.action_dogProfilesFragment2_to_addDogFormFragment)
         }
-        auxButton.setOnClickListener {
+        profileCard.setOnClickListener {
             navController.navigate(R.id.action_dogProfilesFragment_to_dogProfileNavContainer)
         }
     }
