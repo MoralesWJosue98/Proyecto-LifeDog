@@ -61,7 +61,7 @@
         app:destination="@id/dogDetailsFragment" />
     <fragment
         android:id="@+id/mainDogProfileFragment"
-        android:name="com.carolinac.lifedogapp.ui.MainDogProfileFragment"
+        android:name="com.carolinac.lifedogapp.ui.dogprofile.MainDogProfileFragment"
         tools:layout="@layout/fragment_main_dog_profile"
         android:label="fragment_main_dog_profile">
         <action

@@ -103,5 +103,6 @@ class LifeDogRepository(
     fun getLoggedUser() = userDao.getLoggedUser()
     fun randomAdvice(randomAdviceId: Int) = dogDao.getRandomAdvice(randomAdviceId)
     suspend fun logOut(user: User) = userDao.logOut(user)
+    fun getSelectedDog() = dogDao.getSelectedDog()
 
 }
