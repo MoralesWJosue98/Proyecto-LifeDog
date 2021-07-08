@@ -1,4 +1,4 @@
-package com.carolinac.lifedogapp.ui
+package com.carolinac.lifedogapp.ui.dogprofile
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,10 +8,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Spinner
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.carolinac.lifedogapp.LifeDogApplication
 import com.carolinac.lifedogapp.R
+import com.carolinac.lifedogapp.databinding.FragmentInitialBinding
+import com.carolinac.lifedogapp.databinding.FragmentMainDogProfileBinding
+import com.carolinac.lifedogapp.ui.initial.InitialViewModel
+import com.carolinac.lifedogapp.ui.initial.InitialViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainDogProfileFragment : Fragment() {
@@ -26,12 +32,26 @@ class MainDogProfileFragment : Fragment() {
     private lateinit var vetVisitBtn: LinearLayout
     private lateinit var dewormingBtn: LinearLayout
 
+    private val factory by lazy{
+        val app = requireActivity().application as LifeDogApplication
+        DogProfileViewModelFactory(app.lifeDogRepository)
+    }
+
+    private val viewModel : DogProfileViewModel by viewModels {
+        factory
+    }
+
+    private var _binding: FragmentMainDogProfileBinding? = null
+    private val binding get() = _binding!!
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_dog_profile, container, false)
+        _binding = FragmentMainDogProfileBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -39,6 +59,22 @@ class MainDogProfileFragment : Fragment() {
         navController = findNavController()
         bind(view)
         setListeners()
+
+        binding.apply {
+            viewmodel = viewModel
+            lifecycleOwner = viewLifecycleOwner
+        }
+
+        viewModel.advice.observe(viewLifecycleOwner){
+            viewModel.updateViewText()
+        }
+
+        viewModel.selectedDog.observe(viewLifecycleOwner){ dog ->
+            if(dog != null){
+                viewModel.updateAdvice()
+            }
+        }
+
     }
 
     private fun bind(view: View) {

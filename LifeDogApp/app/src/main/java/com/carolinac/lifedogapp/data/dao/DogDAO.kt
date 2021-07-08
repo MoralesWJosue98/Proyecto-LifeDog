@@ -88,4 +88,7 @@ interface DogDAO {
 
     @Query("SELECT * FROM Advices WHERE advice_id = :randomAdviceId")
     fun getRandomAdvice(randomAdviceId: Int): LiveData<Advices>
+
+    @Query("SELECT * FROM Dog WHERE selected = 1")
+    fun getSelectedDog(): LiveData<Dog?>
 }
