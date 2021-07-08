@@ -11,9 +11,8 @@ class InitialViewModel(private val repository: LifeDogRepository): ViewModel() {
     val userLogged = repository.getLoggedUser()
     val text = MutableLiveData("")
 
-
     fun formText(){
-        text.value = advice.value!!.advice + "\n" + advice.value!!.source
+        text.value = advice.value?.advice + "\n" + advice.value?.source
     }
 
     fun randomAdviceId() = Random.nextInt(1,10)

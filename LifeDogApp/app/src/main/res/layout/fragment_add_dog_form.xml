@@ -1,473 +1,496 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/pale_gray"
-    tools:context=".ui.AddDogFormFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.carolinac.lifedogapp.ui.adddog.AddDogViewModel" />
+    </data>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/pale_gray"
+        android:layout_marginBottom="@dimen/xxl_gap"
+        tools:context=".ui.adddog.AddDogFormFragment">
 
-            <EditText
-                android:id="@+id/tvMedicineSize"
-                android:layout_width="0dp"
-                android:layout_height="41dp"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_size"
-                android:inputType="text"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toStartOf="@+id/tvDetailsGender5"
-                app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender5"
-                app:layout_constraintWidth_percent="0.35" />
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-            <EditText
-                android:id="@+id/tvMedicineHour2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_number"
-                android:inputType="number"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/tvMedicineSize"
-                app:layout_constraintTop_toBottomOf="@+id/textView64"
-                app:layout_constraintWidth_percent="0.35" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <Spinner
+                    android:id="@+id/spSizes"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:padding="@dimen/input_padding"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintStart_toStartOf="@+id/tvDetailsGender5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender5"
+                    app:layout_constraintWidth_percent="0.35" />
 
-            <TextView
-                android:id="@+id/tvDetailsGender6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/dog_birth_date"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="@dimen/small_font"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvMedicineSize"
-                tools:ignore="MissingConstraints" />
+                <EditText
+                    android:id="@+id/tvMedicineHour2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:hint="@string/hint_number"
+                    android:inputType="number"
+                    android:padding="@dimen/input_padding"
+                    android:text="@={viewmodel.weight}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/spSizes"
+                    app:layout_constraintTop_toBottomOf="@+id/textView64"
+                    app:layout_constraintWidth_percent="0.35" />
 
 
-            <EditText
-                android:id="@+id/tvMedicineDate2"
-                android:layout_width="0dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_calendar"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_date"
-                android:inputType="date"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toStartOf="@+id/tvDetailsGender6"
-                app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender6"
-                app:layout_constraintWidth_percent="0.35" />
-
-            <TextView
-                android:id="@+id/tvDetailsGender7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dog_color"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="@dimen/small_font"
-                app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender6"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="204dp" />
-
-
-            <EditText
-                android:id="@+id/tvMedicineDateColor"
-                android:layout_width="0dp"
-                android:layout_height="41dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_paintbrush"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/black"
-                android:inputType="date"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.478"
-                app:layout_constraintStart_toEndOf="@+id/tvMedicineDate2"
-                app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender7"
-                app:layout_constraintWidth_percent="0.35" />
-
-            <TextView
-                android:id="@+id/textView64"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dog_weight"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="@dimen/small_font"
-                app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender5"
-                app:layout_constraintStart_toStartOf="@+id/tvMedicineHour2"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/tvDetailsGender5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/dog_size"
-                android:textColor="?attr/colorOnBackground"
-                android:textSize="@dimen/small_font"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
-
-            <TextView
-                android:id="@+id/TextView20"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/medium_gap"
-                android:text="@string/title_general_info"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <View
-                android:id="@+id/view"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dividers"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView20" />
-
-            <ImageView
-                android:id="@+id/ivUploadDogPic"
-                android:layout_width="163dp"
-                android:layout_height="132dp"
-                android:layout_marginTop="@dimen/default_gap"
-                android:backgroundTint="@color/white"
-                android:scaleType="centerCrop"
-                android:src="@color/lime_green"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view"
-                tools:src="@drawable/ic_perrito" />
-
-            <TextView
-                android:id="@+id/tvUploadPic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_gap"
-                android:clickable="true"
-                android:text="@string/add_dog_photo"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivUploadDogPic" />
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvUploadPic" />
-
-            <EditText
-                android:id="@+id/etAddDogName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_pawprint"
-                android:drawablePadding="@dimen/input_min_padding"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_dog_name"
-                android:inputType="text"
-                android:padding="@dimen/input_padding"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-            <TextView
-                android:id="@+id/textView23"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etAddDogName" />
-
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_heart"
-                android:drawablePadding="@dimen/input_padding"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_dog_breed"
-                android:inputType="text"
-                android:padding="@dimen/input_min_padding"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/dog_gender"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText" />
-
-            <RadioGroup
-                android:id="@+id/genderRadioGroup"
-                android:layout_width="0dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:foregroundGravity="fill_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView63">
-
-                <RadioButton
-                    android:id="@+id/radioButton"
+                <TextView
+                    android:id="@+id/tvDetailsGender6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/medium_gap"
-                    android:text="@string/male_dog" />
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/dog_birth_date"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="@dimen/small_font"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spSizes"
+                    tools:ignore="MissingConstraints" />
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
+
+                <EditText
+                    android:id="@+id/tvMedicineDate2"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:hint="@string/hint_date"
+                    android:text="@={viewmodel.birthday}"
+                    android:inputType="date"
+                    android:padding="@dimen/input_padding"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintStart_toStartOf="@+id/tvDetailsGender6"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender6"
+                    app:layout_constraintWidth_percent="0.35" />
+
+                <TextView
+                    android:id="@+id/tvDetailsGender7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/female_dog" />
-            </RadioGroup>
+                    android:layout_marginStart="68dp"
 
-            <CheckBox
-                android:id="@+id/cbEsterilizado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="204dp"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/sterilized_dog"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvMedicineDateColor" />
-
-            <TextView
-                android:id="@+id/TextView21"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="@string/title_diseases"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cbEsterilizado" />
-
-            <View
-                android:id="@+id/view1"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dividers"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView21" />
+                    android:text="@string/dog_color"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="@dimen/small_font"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender6"
+                    app:layout_constraintStart_toEndOf="@+id/tvDetailsGender6" />
 
 
-            <EditText
-                android:id="@+id/edMedicineRage"
-                android:layout_width="0dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_disease"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_rage"
-                android:inputType="text"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view1"
-                app:layout_constraintWidth_percent="0.55" />
+                <EditText
+                    android:id="@+id/tvMedicineDateColor"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_paintbrush"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:hint="@string/black"
+                    android:inputType="text"
+                    android:padding="@dimen/input_padding"
+                    android:text="@={viewmodel.color}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.478"
+                    app:layout_constraintStart_toEndOf="@+id/tvMedicineDate2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDetailsGender7"
+                    app:layout_constraintWidth_percent="0.35" />
 
-            <Button
-                android:id="@+id/btnRage"
-                android:layout_width="116dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="@dimen/default_gap"
-                android:backgroundTint="@color/dark_blue"
-                android:text="@string/btn_add"
-                android:textColorLink="@color/dark_blue"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                app:cornerRadius="@dimen/corner_radius"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/edMedicineRage"
-                app:layout_constraintTop_toTopOf="@+id/edMedicineRage"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dog_weight"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="@dimen/small_font"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/tvDetailsGender5"
+                    app:layout_constraintStart_toStartOf="@+id/tvMedicineHour2"
+                    tools:ignore="MissingConstraints" />
 
-            <TextView
-                android:id="@+id/tvEnfermedades"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="No padece de enfermedades"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edMedicineRage" />
+                <TextView
+                    android:id="@+id/tvDetailsGender5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/dog_size"
+                    android:textColor="?attr/colorOnBackground"
+                    android:textSize="@dimen/small_font"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/genderRadioGroup" />
+
+                <TextView
+                    android:id="@+id/TextView20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/medium_gap"
+                    android:text="@string/title_general_info"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dividers"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextView20" />
+
+                <ImageView
+                    android:id="@+id/ivUploadDogPic"
+                    android:layout_width="163dp"
+                    android:layout_height="132dp"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:backgroundTint="@color/white"
+                    android:scaleType="centerCrop"
+                    android:src="@color/lime_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    tools:src="@drawable/ic_perrito" />
+
+                <TextView
+                    android:id="@+id/tvUploadPic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/small_gap"
+                    android:clickable="true"
+                    android:text="@string/life_dog"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivUploadDogPic" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvUploadPic" />
+
+                <EditText
+                    android:id="@+id/etAddDogName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_pawprint"
+                    android:drawablePadding="@dimen/input_min_padding"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:text="@={viewmodel.dogName}"
+                    android:hint="@string/hint_dog_name"
+                    android:inputType="text"
+                    android:padding="@dimen/input_padding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/dog_breed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etAddDogName" />
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_heart"
+                    android:drawablePadding="@dimen/input_padding"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:text="@={viewmodel.breed}"
+                    android:hint="@string/hint_dog_breed"
+                    android:inputType="text"
+                    android:padding="@dimen/input_min_padding"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+                <TextView
+                    android:id="@+id/textView63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/dog_gender"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+                <RadioGroup
+                    android:id="@+id/genderRadioGroup"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:foregroundGravity="fill_horizontal"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView63">
+
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="@{() -> viewmodel.setGender(true)}"
+                        android:layout_marginRight="@dimen/medium_gap"
+                        android:text="@string/male_dog" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:onClick="@{() -> viewmodel.setGender(false)}"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/female_dog" />
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbEsterilizado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="204dp"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/sterilized_dog"
+                    android:checked="@={viewmodel.sterilized}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvMedicineDateColor" />
+
+                <TextView
+                    android:id="@+id/TextView21"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@string/title_diseases"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbEsterilizado" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dividers"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextView21" />
 
 
-            <TextView
-                android:id="@+id/TextView22"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_large_gap"
-                android:text="@string/title_allergies"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tvEnfermedades" />
+                <EditText
+                    android:id="@+id/edMedicineRage"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_disease"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:hint="@string/hint_rage"
+                    android:text="@={viewmodel.rage}"
+                    android:inputType="text"
+                    android:padding="@dimen/input_padding"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view1"
+                    app:layout_constraintWidth_percent="0.55" />
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="0dp"
-                android:layout_height="@dimen/dividers"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/extra_small_gap"
-                android:layout_marginEnd="@dimen/medium_gap"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/TextView22" />
+                <Button
+                    android:id="@+id/btnRage"
+                    android:layout_width="116dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:backgroundTint="@color/dark_blue"
+                    android:text="@string/btn_add"
+                    android:onClick="@{() -> viewmodel.addRage()}"
+                    android:textColorLink="@color/dark_blue"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:cornerRadius="@dimen/corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/edMedicineRage"
+                    app:layout_constraintTop_toTopOf="@+id/edMedicineRage"
+                    tools:ignore="MissingConstraints" />
 
-            <EditText
-                android:id="@+id/edMedicineAllergies"
-                android:layout_width="0dp"
-                android:layout_height="41dp"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:background="@drawable/custom_input_aqua"
-                android:drawableStart="@drawable/ic_disease"
-                android:drawablePadding="@dimen/extra_small_gap"
-                android:elevation="@dimen/default_shadow"
-                android:ems="10"
-                android:hint="@string/hint_flowers"
-                android:inputType="text"
-                android:padding="@dimen/input_padding"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2"
-                app:layout_constraintWidth_percent="0.55" />
-
-            <Button
-                android:id="@+id/btnAllergies"
-                android:layout_width="116dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="@dimen/default_gap"
-                android:backgroundTint="@color/dark_blue"
-                android:text="@string/btn_add"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textColorLink="@color/dark_blue"
-                app:cornerRadius="@dimen/corner_radius"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.523"
-                app:layout_constraintStart_toEndOf="@+id/edMedicineAllergies"
-                app:layout_constraintTop_toTopOf="@+id/edMedicineAllergies"
-                tools:ignore="MissingConstraints" />
-
-            <TextView
-                android:id="@+id/tvAllergies"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/medium_gap"
-                android:layout_marginTop="@dimen/default_gap"
-                android:text="No padece de alergias"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edMedicineAllergies" />
+                <TextView
+                    android:id="@+id/tvEnfermedades"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@{viewmodel.rages}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edMedicineRage" />
 
 
-            <Button
-                android:id="@+id/btnCreateDog"
-                android:layout_width="165dp"
-                android:layout_height="46dp"
-                android:layout_marginTop="@dimen/medium_gap"
-                android:layout_marginBottom="@dimen/default_gap"
-                android:backgroundTint="@color/dark_blue"
-                android:text="@string/create_dog"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textColorLink="@color/dark_blue"
-                app:cornerRadius="@dimen/corner_radius"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvAllergies"
-                app:layout_constraintWidth_percent="0.60"
-                tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/TextView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_large_gap"
+                    android:text="@string/title_allergies"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvEnfermedades" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dividers"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/extra_small_gap"
+                    android:layout_marginEnd="@dimen/medium_gap"
+                    android:background="?android:attr/listDivider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TextView22" />
+
+                <EditText
+                    android:id="@+id/edMedicineAllergies"
+                    android:layout_width="0dp"
+                    android:layout_height="41dp"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:background="@drawable/custom_input_aqua"
+                    android:drawableStart="@drawable/ic_disease"
+                    android:drawablePadding="@dimen/extra_small_gap"
+                    android:elevation="@dimen/default_shadow"
+                    android:ems="10"
+                    android:hint="@string/hint_flowers"
+                    android:text="@={viewmodel.allergy}"
+                    android:inputType="text"
+                    android:padding="@dimen/input_padding"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2"
+                    app:layout_constraintWidth_percent="0.55" />
+
+                <Button
+                    android:id="@+id/btnAllergies"
+                    android:layout_width="116dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="@dimen/default_gap"
+                    android:backgroundTint="@color/dark_blue"
+                    android:text="@string/btn_add"
+                    android:onClick="@{() -> viewmodel.addAllergy()}"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/dark_blue"
+                    app:cornerRadius="@dimen/corner_radius"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.523"
+                    app:layout_constraintStart_toEndOf="@+id/edMedicineAllergies"
+                    app:layout_constraintTop_toTopOf="@+id/edMedicineAllergies"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/tvAllergies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/medium_gap"
+                    android:layout_marginTop="@dimen/default_gap"
+                    android:text="@{viewmodel.allergies}"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edMedicineAllergies" />
+
+
+                <Button
+                    android:id="@+id/btnCreateDog"
+                    android:layout_width="165dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="@dimen/medium_gap"
+                    android:layout_marginBottom="@dimen/default_gap"
+                    android:backgroundTint="@color/dark_blue"
+                    android:text="@string/create_dog"
+                    android:onClick="@{() -> viewmodel.createDog()}"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/dark_blue"
+                    app:cornerRadius="@dimen/corner_radius"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAllergies"
+                    app:layout_constraintWidth_percent="0.60"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

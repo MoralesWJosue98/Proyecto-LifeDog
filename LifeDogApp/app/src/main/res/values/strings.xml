@@ -209,4 +209,5 @@
     <string name="create_dog">Crear perrito</string>
     <string name="hint_rage">Rabia</string>
     <string name="hint_flowers">Flores</string>
+    <string name="DogSuccesfullyAdded">Perro creado con éxito</string>
 </resources>

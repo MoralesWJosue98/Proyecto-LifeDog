@@ -29,7 +29,14 @@
         app:destination="@id/addDogFormFragment" />
     <fragment
         android:id="@+id/addDogFormFragment"
-        android:name="com.carolinac.lifedogapp.ui.AddDogFormFragment"
+        android:name="com.carolinac.lifedogapp.ui.adddog.AddDogFormFragment"
         tools:layout="@layout/fragment_add_dog_form"
-        android:label="fragment_add_dog_form" />
+        android:label="fragment_add_dog_form" >
+        <action
+            android:id="@+id/action_addDogFormFragment_to_dogProfilesFragment"
+            app:destination="@id/dogProfilesFragment"
+            app:popUpTo="@id/dogProfilesFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
 </navigation>

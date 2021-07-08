@@ -91,4 +91,6 @@ interface DogDAO {
 
     @Query("SELECT * FROM Dog WHERE selected = 1")
     fun getSelectedDog(): LiveData<Dog?>
+    @Query("SELECT max(dog_id) FROM Dog")
+    fun lastInsertedId(): LiveData<Int?>
 }
